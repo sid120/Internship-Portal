@@ -27,8 +27,8 @@ $beaggregate= $_POST['beagg'];
 $backlogs = $_POST['curback']; 
 $hisofbk = $_POST['hob'];
 
-mysql_connect('localhost','root','');
-mysql_select_db('details');
+mysqli_connect('localhost','root','');
+mysqli_select_db('details');
 
 $sql = "SELECT * FROM basicdetails WHERE Approve=1 and Branch='$branch' and SSLC='$sslc' and PU/Dip='$puaggregate' and BE='$beaggregate' and Backlogs='$backlogs' and HofBacklogs='$hisofbk'"; 
 
@@ -36,7 +36,7 @@ $sql = "SELECT * FROM basicdetails WHERE Approve=1 and Branch='$branch' and SSLC
 
 
         
-          while( $row = mysql_fetch_assoc($sql) )
+          while( $row = mysqli_fetch_assoc($sql) )
 {         
             echo
             "<tr>"."<td>".$row ['FirstName']."</td>". "</tr>";
