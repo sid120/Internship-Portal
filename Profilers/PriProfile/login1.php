@@ -5,16 +5,16 @@
 	
 	if ($priusername&&$password)
 	{
-		$connect = mysql_connect("localhost","root","") or die("Couldn't Connect");
-		mysql_select_db("placement") or die("Cant find DB");
+		$connect = mysqli_connect("localhost","root","") or die("Couldn't Connect");
+		mysqli_select_db("placement") or die("Cant find DB");
 		
-		$query = mysql_query("SELECT * FROM prilogin WHERE Username = '$priusername'");
+		$query = mysqli_query($connect, "SELECT * FROM prilogin WHERE Username = '$priusername'");
 		
-		$numrows = mysql_num_rows($query);
+		$numrows = mysqli_num_rows($query);
 		
 		if ($numrows!=0)
 		{
-			while($row = mysql_fetch_assoc($query))
+			while($row = mysqli_fetch_assoc($query))
 			{
 				$dbusername = $row['Username'];
 				$dbpassword = $row['Password'];

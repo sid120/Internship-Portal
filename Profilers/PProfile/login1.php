@@ -8,16 +8,16 @@
 <?php 	
 	if ($pusername&&$password)
 	{
-		$connect = mysql_connect("localhost","root","") or die("Couldn't Connect");
-		mysql_select_db("placement") or die("Cant find DB");
+		$connect = mysqli_connect("localhost","root","","details") or die("Couldn't Connect");
+		mysqli_select_db("placement") or die("Cant find DB");
 		
-		$query = mysql_query("SELECT * FROM plogin WHERE Username='$pusername'");
+		$query = mysqli_query($connect ,"SELECT * FROM plogin WHERE Username='$pusername'");
 		
-		$numrows = mysql_num_rows($query);
+		$numrows = mysqli_num_rows($query);
 		
 		if ($numrows!=0)
 		{
-			while($row = mysql_fetch_assoc($query))
+			while($row = mysqli_fetch_assoc($query))
 			{
 				$dbusername = $row['Username'];
 				$dbpassword = $row['Password'];

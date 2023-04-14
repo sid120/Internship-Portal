@@ -15,14 +15,14 @@
 <center>
 <?php
 			
-mysql_connect('localhost','root','');
-mysql_select_db('details');
+mysqli_connect('localhost','root','');
+mysqli_select_db('details');
 if(isset($_POST['submit']))
 { 
 $cname = $_POST['cname'];
-$sql = mysql_query("SELECT * FROM addpdrive WHERE `CompanyName`='$cname'");
+$sql = mysqli_query("SELECT * FROM addpdrive WHERE `CompanyName`='$cname'");
 
-while($row = mysql_fetch_assoc($sql))
+while($row = mysqli_fetch_assoc($sql))
 {
 	            print "<tr>"; 
 	print "<br><td>Date:";
@@ -49,7 +49,7 @@ print "</td></tr><br><br><br>";
 }
 }
 ?>
-<!--while ($row = mysql_fetch_assoc($rs_result)) 
+<!--while ($row = mysqli_fetch_assoc($rs_result)) 
 { 
 
             print "<tr>"; 
