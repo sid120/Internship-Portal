@@ -9,8 +9,8 @@
    
 ?>
 <?php
-$connect = mysql_connect("localhost", "root", ""); // Establishing Connection with Server
-mysql_select_db("details"); // Selecting Database from Server
+$connect = mysqli_connect("localhost", "root", "", "details"); // Establishing Connection with Server
+mysqli_select_db($connect,"details"); // Selecting Database from Server
 if(isset($_POST['submit']))
 { 
 $fname = $_POST['Fname'];
@@ -32,7 +32,7 @@ if($USN !=''||$email !='')
 {
 	if($USN == $sun)
     {
-    if($query = mysql_query("INSERT INTO `details`.`basicdetails` ( `FirstName`, `LastName`, `USN`, `Mobile`, `Email`, `DOB`, `Sem`, `Branch`, `SSLC`, `PU/Dip`, `BE`, `Backlogs`, `HofBacklogs`, `DetainYears`, `Approve`) 
+    if($query = mysqli_query($connect,"INSERT INTO `details`.`basicdetails` ( `FirstName`, `LastName`, `USN`, `Mobile`, `Email`, `DOB`, `Sem`, `Branch`, `SSLC`, `PU/Dip`, `BE`, `Backlogs`, `HofBacklogs`, `DetainYears`, `Approve`) 
           VALUES ('$fname', '$lname', '$USN', '$phno', '$email', '$date', '$cursem', '$branch', '$per', '$puagg', '$beaggregate', '$back', '$hisofbk', '$detyear', '0')"))
     {
 				echo "<center>Details has been received successfully...!!</center>";
@@ -51,8 +51,8 @@ else{
 
 
 <?php
-$connect = mysql_connect("localhost", "root", ""); // Establishing Connection with Server
-mysql_select_db("details"); // Selecting Database from Server
+$connect1 = mysqli_connect("localhost", "root", "", "details"); // Establishing Connection with Server
+mysqli_select_db($connect1,"details"); // Selecting Database from Server
 if(isset($_POST['update']))
 { 
 $fname = $_POST['Fname'];
@@ -76,11 +76,11 @@ if($USN !=''||$email !='')
 	if($USN == $sun)
 	{
 		
-	$sql = mysql_query("SELECT * FROM `details`.`basicdetails` WHERE `USN`='$USN'");
-	if(mysql_num_rows($sql) == 1)
+	$sql = mysqli_query($connect1,"SELECT * FROM `details`.`basicdetails` WHERE `USN`='$USN'");
+	if(mysqli_num_rows($sql) == 1)
 	{
   
-		if($query = mysql_query("UPDATE `details`.`basicdetails` SET `FirstName`='$fname', `LastName`='$lname', `Mobile`='$phno', `Email`='$email', `DOB`='$date', `Sem`='$cursem', `Branch`= '$branch', `SSLC`='$per', `PU/Dip`='$puagg', `BE`='$beaggregate', `Backlogs`='$back', `HofBacklogs`='$hisofbk', `DetainYears`='$detyear' ,`Approve`='0'
+		if($query = mysqli_query($connect1,"UPDATE `details`.`basicdetails` SET `FirstName`='$fname', `LastName`='$lname', `Mobile`='$phno', `Email`='$email', `DOB`='$date', `Sem`='$cursem', `Branch`= '$branch', `SSLC`='$per', `PU/Dip`='$puagg', `BE`='$beaggregate', `Backlogs`='$back', `HofBacklogs`='$hisofbk', `DetainYears`='$detyear' ,`Approve`='0'
            WHERE `basicdetails`.`USN` = '$USN'"))
                {
 				echo "<center>Data Updated successfully...!!</center>";
