@@ -116,14 +116,14 @@
 			   <?php
 $p = $_SESSION['department'];
 $num_rec_per_page=15;
-mysql_connect('localhost','root','');
-mysql_select_db('details');
+$con = mysqli_connect('localhost','root','', 'details');
+mysqli_select_db($con,'details');
 if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; }; 
 $start_from = ($page-1) * $num_rec_per_page; 
 $sql = "SELECT * FROM basicdetails WHERE Approve=0 and Branch='$p' LIMIT $start_from, $num_rec_per_page"; 
-$rs_result = mysql_query($sql); //run the query
+$rs_result = mysqli_query($con,$sql); //run the query
 
-while ($row = mysql_fetch_assoc($rs_result)) 
+while ($row = mysqli_fetch_assoc($rs_result)) 
 { 
 
             print "<tr>"; 
@@ -164,11 +164,11 @@ print "</tr>";
 			  <?php 
 		
 $num_rec_per_page=15;
-mysql_connect('localhost','root','');
-mysql_select_db('details');
+$con1 = mysqli_connect('localhost','root','', 'details');
+mysqli_select_db($con1,'details');
 $sql = "SELECT * FROM basicdetails where Approve=0 and Branch='$p'"; 
-$rs_result = mysql_query($sql); //run the query
-$total_records = mysql_num_rows($rs_result);  //count number of records
+$rs_result = mysqli_query($con1,$sql); //run the query
+$total_records = mysqli_num_rows($rs_result);  //count number of records
 $totalpage = ceil($total_records / $num_rec_per_page); 
 
  

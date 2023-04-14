@@ -8,7 +8,7 @@
 	if ($husername&&$password&&$branch)
 	{
 		$connect = mysqli_connect("localhost","root","","details") or die("Couldn't Connect");
-		mysqli_select_db("placement") or die("Cant find DB");
+		mysqli_select_db($connect,"placement") or die("Cant find DB");
 		
 		$query = mysqli_query($connect, "SELECT * FROM hlogin WHERE Username='$husername'");
 		
