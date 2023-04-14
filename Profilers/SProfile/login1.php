@@ -5,10 +5,10 @@
 	
 	if ($username&&$password)
 	{
-		$connect = mysqli_connect("localhost","root","") or die("Couldn't Connect");
-		mysqli_select_db("placement") or die("Cant find DB");
+		$connect = mysqli_connect("localhost","root","", "details") or die("Couldn't Connect");
+		mysqli_select_db($connect,"placement") or die("Cant find DB");
 		
-		$query = mysqli_query("SELECT * FROM slogin WHERE USN='$username'");
+		$query = mysqli_query($connect,"SELECT * FROM slogin WHERE USN='$username'");
 		
 		$numrows = mysqli_num_rows($query);
 		
