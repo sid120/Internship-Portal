@@ -15,12 +15,12 @@
 <center>
 <?php
 			
-mysqli_connect('localhost','root','');
-mysqli_select_db('details');
+$con = mysqli_connect('localhost','root','','details');
+mysqli_select_db($con,'details');
 if(isset($_POST['submit']))
 { 
 $cname = $_POST['cname'];
-$sql = mysqli_query("SELECT * FROM addpdrive WHERE `CompanyName`='$cname'");
+$sql = mysqli_query($con,"SELECT * FROM addpdrive WHERE `CompanyName`='$cname'");
 
 while($row = mysqli_fetch_assoc($sql))
 {

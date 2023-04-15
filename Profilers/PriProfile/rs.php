@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$connect = mysqli_connect("localhost", "root", ""); // Establishing Connection with Server
-   mysqli_select_db("placement") or die("Cant Connect to database"); // Selecting Database from Server
+$connect = mysqli_connect("localhost", "root", "", "details"); // Establishing Connection with Server
+   mysqli_select_db($connect,"placement") or die("Cant Connect to database"); // Selecting Database from Server
  
   $USN = $_POST['USN'];
   $Question = $_POST['Question'];

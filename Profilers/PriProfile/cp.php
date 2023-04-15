@@ -1,7 +1,7 @@
 <?php
 session_start();
 $connect = mysqli_connect("localhost", "root", ""); // Establishing Connection with Server
-mysqli_select_db("placement"); // Selecting Database from Server
+mysqli_select_db($connect,"placement"); // Selecting Database from Server
 
 	$Username = $_SESSION['priusername'];
 	$Password = $_POST['Password'];
@@ -19,7 +19,7 @@ mysqli_select_db("placement"); // Selecting Database from Server
 			    
 				if($cur == $dbpassword)
 				{
-					if($query = mysqli_query("UPDATE `placement`.`prilogin` SET `Password` = '$Password' WHERE `prilogin`.`Username` = '$Username'"))
+					if($query = mysqli_query($connect,"UPDATE `placement`.`prilogin` SET `Password` = '$Password' WHERE `prilogin`.`Username` = '$Username'"))
 					{
 						echo "<center>Password Changed Successfully</center>";
 					} else {
