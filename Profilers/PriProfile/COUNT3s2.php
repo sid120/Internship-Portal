@@ -38,13 +38,13 @@
    <div class="templatemo-content-container">
   <div class="templatemo-content-widget no-padding">
 <?php
-mysql_connect('localhost','root','');
-mysql_select_db('details');
+$con = mysqli_connect('localhost','root','');
+mysqli_select_db($con,'details');
 if(isset($_POST['s2']))
 { 
 $Susn = $_POST['susn'];
-$RESULT = mysql_query("SELECT * FROM basicdetails WHERE USN='$Susn'");
-$row = mysql_fetch_assoc($RESULT);
+$RESULT = mysqli_query($con,"SELECT * FROM basicdetails WHERE USN='$Susn'");
+$row = mysqli_fetch_assoc($RESULT);
 echo "<br><h3>Details of Student '$Susn'&nbsp:&nbsp";
 echo "</h3>";
             print "<center><tr>"; 
