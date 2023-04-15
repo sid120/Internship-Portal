@@ -5,8 +5,8 @@
 	
 	if ($priusername&&$password)
 	{
-		$connect = mysqli_connect("localhost","root","") or die("Couldn't Connect");
-		mysqli_select_db("placement") or die("Cant find DB");
+		$connect = mysqli_connect("localhost","root","","details") or die("Couldn't Connect");
+		mysqli_select_db($connect,"placement") or die("Cant find DB");
 		
 		$query = mysqli_query($connect, "SELECT * FROM prilogin WHERE Username = '$priusername'");
 		
