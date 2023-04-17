@@ -152,8 +152,8 @@
                     <h2 class="media-heading text-uppercase">Drive Results</h2>
                     <p>Latest Drive Result Overview</p> 
                     <?php			
-mysql_connect('localhost','root','');
-mysql_select_db('details');
+$connect = mysql_connect('localhost','root','','details');
+mysql_select_db($connect,'details');
 $RESULT=mysql_query("SELECT DISTINCT count(CompanyName) from addpdrive where PVenue LIKE '%CIT%' AND YEAR(Date)=YEAR(NOW())");
 $data=mysql_fetch_assoc($RESULT);
 echo "<br><br><h3>Companies In Our Campus In This Year&nbsp:&nbsp";
