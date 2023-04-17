@@ -74,7 +74,7 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                    <li>
-                  <a href="../../Homepage/index.php">Home CIT-PMS</a>
+                  <a href="../../Homepage/index.php">Home VIIT-IMP</a>
                 </li>
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
@@ -94,7 +94,7 @@
             <div class="templatemo-content-widget white-bg col-2">
               <i class="fa fa-times"></i>
               <div class="square"></div>
-              <h2 class="templatemo-inline-block">Welcome to IMP-VIIT</h2><hr>
+              <h2 class="templatemo-inline-block">Welcome to VIIT-IMP</h2><hr>
               <p>There is a worth for everything so do logging in here. The Use of this is, You can View Student details, Check their Eligibility Criteria and U cvan look up drive details</p>    
               <p><a href="Students Eligibility.php">Check Students Eligibility</a></p>
               

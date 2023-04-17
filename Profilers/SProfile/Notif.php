@@ -72,7 +72,7 @@
               <a href="#"><i class="fa fa-bar-chart fa-fw"></i>Placement Drives</a>
             </li>
             <li>
-              <a href="#" ><i class="fa fa-sliders fa-fw"></i>Preferences</a>
+              <a href="preferences.php" ><i class="fa fa-sliders fa-fw"></i>Fill Profile</a>
             </li>
             <li>
               <a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a>
@@ -87,16 +87,16 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                 <li>
-                  <a href="../../Homepage/index.php" >Home CIT-PMS</a>
+                  <a href="../../Homepage/index.php" >Home VIIT-IMP</a>
                 </li>
                 <li>
-                  <a href="">Drives Homepage</a>
+                  <a href="../../Drives/index.php">Drives Homepage</a>
                 </li>
                 <li>
                   <a href="#" class="active">Notifications</a>
                 </li>
                 <li>
-                  <a href="Changed Password.php">Change Password</a>
+                  <a href="Change Password.php">Change Password</a>
                 </li>
               </ul>
             </nav>
@@ -107,8 +107,8 @@
             <h1><center>Department Messages</center></h1>
           </div>
           <footer class="text-right">
-          		<p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
+          <p>Copyright &copy; 2023 VIIT-IMP | Developed by
+              Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
 			  </p>
           </footer>
         </div>

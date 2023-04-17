@@ -121,7 +121,7 @@
 				<div class="col-md-3 get_in_touch ftr">
 					<h3>GET IN TOUCH</h3>
 					<p>Kondhwa, Pune, Maharashtra,India</p>
-					<p>8380885374</p>
+					<p>XXXXXXX056</p>
 					<a href="mailto:studentsection@viit.ac.in">VIIT-Mail</a>
 				</div>
 				<div class="col-md-3 ftr-logo">
