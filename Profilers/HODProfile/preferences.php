@@ -70,7 +70,7 @@
           <ul>
             <li><a href="login.php"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>           
             <li><a href="manage-student.php"><i class="fa fa-users fa-fw"></i>Manage Students</a></li>
-            <li><a href="#" class="active"><i class="fa fa-sliders fa-fw"></i>Preferences</a></li>
+            <li><a href="#" class="active"><i class="fa fa-sliders fa-fw"></i>Update Profile</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>
         </nav>
@@ -81,7 +81,7 @@
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-                  <li><a href="../../Homepage/indes.php">Home CIT-PMS</a></li>
+                  <li><a href="../../Homepage/indes.php">Home VIIT-IMP</a></li>
                 <li><a href="../../Drives/index.php">Drives</a></li>
                 <li><a href="Notif.php">Notification</a></li>
                 <li><a href="Change Password.php">Change Password</a></li>
@@ -91,7 +91,7 @@
         </div>
         <div class="templatemo-content-container">
           <div class="templatemo-content-widget white-bg">
-            <h2 class="margin-bottom-10">Preferences</h2>
+            <h2 class="margin-bottom-10">Update Profile</h2>
             <p>Update your Details here:</p>
             <form action="index.php" class="templatemo-login-form" method="post" enctype="multipart/form-data">
               <div class="row form-group">
@@ -137,8 +137,8 @@
             </form>
           </div>
 			<footer class="text-right">
-            <p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a></p>
+      <p>Copyright &copy; 2023 VIIT-IMP | Developed by
+              Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
           </footer>        
 		  </div>
       </div>

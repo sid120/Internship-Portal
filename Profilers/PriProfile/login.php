@@ -74,7 +74,11 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                    <li>
+<<<<<<< HEAD
                   <a href="../../Homepage/index.php">Home IMP-VIIT</a>
+=======
+                  <a href="../../Homepage/index.php">Home VIIT-IMP</a>
+>>>>>>> c9bf098dbb9fbf9ebae97b5850b3bb0a69392bf9
                 </li>
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
@@ -94,7 +98,7 @@
             <div class="templatemo-content-widget white-bg col-2">
               <i class="fa fa-times"></i>
               <div class="square"></div>
-              <h2 class="templatemo-inline-block">Welcome to IMP-VIIT</h2><hr>
+              <h2 class="templatemo-inline-block">Welcome to VIIT-IMP</h2><hr>
               <p>There is a worth for everything so do logging in here. The Use of this is, You can View Student details, Check their Eligibility Criteria and U cvan look up drive details</p>    
               <p><a href="Students Eligibility.php">Check Students Eligibility</a></p>
               
@@ -152,18 +156,18 @@
                     <h2 class="media-heading text-uppercase">Drive Results</h2>
                     <p>Latest Drive Result Overview</p> 
                     <?php			
-$connect = mysql_connect('localhost','root','','details');
-mysql_select_db($connect,'details');
-$RESULT=mysql_query("SELECT DISTINCT count(CompanyName) from addpdrive where PVenue LIKE '%CIT%' AND YEAR(Date)=YEAR(NOW())");
-$data=mysql_fetch_assoc($RESULT);
+$con = mysqli_connect('localhost','root','', 'details');
+mysqli_select_db($con,'details');
+$RESULT=mysqli_query($con,"SELECT DISTINCT count(CompanyName) from addpdrive");
+$data=mysqli_fetch_assoc($RESULT);
 echo "<br><br><h3>Companies In Our Campus In This Year&nbsp:&nbsp";
 echo $data['count(CompanyName)'];
-$RESULT=mysql_query("SELECT count(Attendence) from updatedrive where Attendence=1 AND YEAR(Date)=YEAR(NOW())");
-$data=mysql_fetch_assoc($RESULT);
+$RESULT=mysqli_query($con,"SELECT count(Attendence) from updatedrive where Attendence=1");
+$data=mysqli_fetch_assoc($RESULT);
 echo "<br><BR>Number of Students Attended In This Year&nbsp:&nbsp";
 echo $data['count(Attendence)'];
-$RESULT=mysql_query("SELECT count(Placed) from updatedrive where Placed=1 AND YEAR(Date)=YEAR(NOW())");
-$data=mysql_fetch_assoc($RESULT);
+$RESULT=mysqli_query($con,"SELECT count(Placed) from updatedrive where Placed=1");
+$data=mysqli_fetch_assoc($RESULT);
 echo "<BR><br>Number of Students Placed In This Year&nbsp:&nbsp";
 echo $data['count(Placed)'];
 echo "</h3>";

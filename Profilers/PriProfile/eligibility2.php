@@ -27,8 +27,8 @@ $beaggregate= $_POST['beagg'];
 $backlogs = $_POST['curback']; 
 $hisofbk = $_POST['hob'];
 
-mysqli_connect('localhost','root','');
-mysqli_select_db('details');
+$con = mysqli_connect('localhost','root','', 'details');
+mysqli_select_db($con,'details');
 
 $sql = "SELECT * FROM basicdetails WHERE Approve=1 and Branch='$branch' and SSLC='$sslc' and PU/Dip='$puaggregate' and BE='$beaggregate' and Backlogs='$backlogs' and HofBacklogs='$hisofbk'"; 
 

@@ -17,36 +17,36 @@
 <center>
 <?php
 			
-mysqli_connect('localhost','root','');
-mysqli_select_db('details');
+$con = mysqli_connect('localhost','root','', 'details');
+mysqli_select_db($con,'details');
 if(isset($_POST['submit']))
 { 
 $cname = $_POST['cname'];
 
 $date= $_POST['date'];
 
-$RESULT=mysqli_query("SELECT count(Attendence) from updatedrive where Attendence=1 and CompanyName='$cname' and Date='$date'");
+$RESULT=mysqli_query($con,"SELECT count(Attendence) from updatedrive where Attendence=1 and CompanyName='$cname' and Date='$date'");
 $data=mysqli_fetch_assoc($RESULT);
 echo "<br>Number of Students Attended&nbsp:&nbsp";
 echo $data['count(Attendence)'];
 
-$RESULT=mysqli_query("SELECT count(WT) from updatedrive where WT=1 and CompanyName='$cname' and Date='$date'");
+$RESULT=mysqli_query($con,"SELECT count(WT) from updatedrive where WT=1 and CompanyName='$cname' and Date='$date'");
 $data=mysqli_fetch_assoc($RESULT);
 echo "<br>Number of Students Cleared WT&nbsp:&nbsp";
 echo $data['count(WT)'];
 
 echo "<br>Number of Students Cleared GD&nbsp:&nbsp";
-$RESULT1=mysqli_query("SELECT count(GD) from updatedrive where GD=1 and CompanyName='$cname' and Date='$date'");
+$RESULT1=mysqli_query($con,"SELECT count(GD) from updatedrive where GD=1 and CompanyName='$cname' and Date='$date'");
 $data1=mysqli_fetch_assoc($RESULT1);
 echo $data1['count(GD)'];
 
 echo "<br>Number of Students Cleared Technical&nbsp:&nbsp";
-$RESULT1=mysqli_query("SELECT count(Techical) from updatedrive where Techical=1 and CompanyName='$cname' and Date='$date'");
+$RESULT1=mysqli_query($con,"SELECT count(Techical) from updatedrive where Techical=1 and CompanyName='$cname' and Date='$date'");
 $data1=mysqli_fetch_assoc($RESULT1);
 echo $data1['count(Techical)'];
 
 echo "<br>Number of Students Placed&nbsp:&nbsp";
-$RESULT1=mysqli_query("SELECT count(Placed) from updatedrive where Placed=1 and CompanyName='$cname' and Date='$date'");
+$RESULT1=mysqli_query($con,"SELECT count(Placed) from updatedrive where Placed=1 and CompanyName='$cname' and Date='$date'");
 $data1=mysqli_fetch_assoc($RESULT1);
 echo $data1['count(Placed)'];
 }
