@@ -74,11 +74,7 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                    <li>
-<<<<<<< HEAD
                   <a href="../../Homepage/index.php">Home IMP-VIIT</a>
-=======
-                  <a href="../../Homepage/index.php">Home VIIT-IMP</a>
->>>>>>> c9bf098dbb9fbf9ebae97b5850b3bb0a69392bf9
                 </li>
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
