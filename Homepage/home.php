@@ -72,10 +72,9 @@
         <header>
             <div class="header-content">
                 <div class="header-content-inner">
-                    <h1>PLACEMENT MANAGEMENT SYSTEM</h1>
+                    <h1>INTERNSHIP MANAGEMENT PORTAL</h1>
                     <hr>
-                    <p>We are here to Build your Skills and Career with our Driven Passion and Reality.</br>Click Below to Get Our Current Drive
-                        Details</p>
+                    <p>The Training and Placement Department of VIIT facilitates career guidance and training assistance for the students in order to achieve their career goals.</br></p>
                     <a href="../Drives/index.php" class="btn btn-primary btn-xl page-scroll">Current Drives</a>
                 </div>
             </div>
@@ -106,19 +105,16 @@
 					<h3>MEMBERS</h3>
 					<ul>
 						<li>
-							<a href="#">Customer Support</a>
+							<a href="https://www.viit.ac.in/placement-i2ic/from-desk-tpo">Placement Support</a>
 						</li>
 						<li>
-							<a href="#">Placement Support</a>
+							<a href="https://www.viit.ac.in/departments/information-technology-ug/faculty-info">Faculty Support</a>
 						</li>
 						<li>
-							<a href="#">Faculty Support</a>
+							<a href="https://www.viit.ac.in/placement-i2ic/our-recruiters-i2ic">Registered Companies</a>
 						</li>
 						<li>
-							<a href="#">Registered Companies</a>
-						</li>
-						<li>
-							<a href="#">Training</a>
+							<a href="https://www.viit.ac.in/placement-i2ic/training-2-placement">Training</a>
 						</li>
 					</ul>
 				</div>

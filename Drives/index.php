@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</span>
 						<ul class="nav1">
 							<li class="hvr-sweep-to-bottom">
-								<a href="../Homepage/index.php">CIT-PMS<i>Goto Placement Homepage</i></a>
+								<a href="../Homepage/index.php">VIIT-IMP<i>Goto Placement Homepage</i></a>
 							</li>
 							<li class="hvr-sweep-to-bottom active">
 								<a href="index.php">Home<i>Get the Overview of the Site</i></a>
