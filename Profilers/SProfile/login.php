@@ -66,7 +66,7 @@
               <a href="#"><i class="fa fa-bar-chart fa-fw"></i>Placement Drives</a>
             </li>
             <li>
-              <a href="preferences.php"><i class="fa fa-sliders fa-fw"></i>Preferences</a>
+              <a href="preferences.php"><i class="fa fa-sliders fa-fw"></i>Fill Profile</a>
             </li>
             <li>
               <a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a>
@@ -81,7 +81,7 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                 <li>
-                  <a href="../../Homepage/index.php">Home CIT-PMS</a>
+                  <a href="../../Homepage/index.php">Home VIIT-IMP</a>
                 </li>
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
@@ -101,11 +101,11 @@
             <div class="templatemo-content-widget white-bg col-2">
               <i class="fa fa-times"></i>
               <div class="square"></div>
-              <h2 class="templatemo-inline-block">Welcome to CIT-PMS</h2>
+              <h2 class="templatemo-inline-block">Welcome to VIIT-IMP</h2>
               <hr>
               <p>Work is Magic and it defines you at every aspect of ur life. As you Work Hard u will become smart and the Irony is Every Smart worker will be a Successfull man where as worthless hardwork is like a monkey finding gold in a sea.
                 <a href="preferences.php""
-                target="_parent">Go and Fill your Details in Preferences Tab</a>
+                target="_parent">Go and Fill your Details in Fill Profile Tab</a>
                 </p>
               <p>We have got number of Partners from the companies who are tied up to our college and it is Incresasing. We are doing our Job of getting u Placed and 
                 Being a Student its your duty to acompolish ur responsibilities.</p>
@@ -221,8 +221,8 @@
           </div>
           <!-- Second row ends -->
           <footer class="text-right">
-            		<p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
+          <p>Copyright &copy; 2023 VIIT-IMP | Developed by
+              Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
 			  </p>
           </footer>
         </div>

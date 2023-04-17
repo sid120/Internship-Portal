@@ -21,7 +21,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Preferences</title>
+    <title>Fill Profile</title>
     <meta name="description" content="">
     <meta name="author" content="templatemo">
     
@@ -72,7 +72,7 @@
               <a href="#"><i class="fa fa-bar-chart fa-fw"></i>Placement Drives</a>
             </li>
             <li>
-              <a href="#" class="active"><i class="fa fa-sliders fa-fw"></i>Preferences</a>
+              <a href="#" class="active"><i class="fa fa-sliders fa-fw"></i>Fill Profile</a>
             </li>
             <li>
               <a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a>
@@ -87,16 +87,16 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                 <li>
-                  <a href="../../Homepage/index.html" >Home CIT-PMS</a>
+                  <a href="../../Homepage/index.html" >Home VIIT-PMS</a>
                 </li>
                 <li>
-                  <a href="">Drives Homepage</a>
+                  <a href="../../Drives/index.php">Drives Homepage</a>
                 </li>
                 <li>
-                  <a href="">Overview</a>
+                  <a href="Notif.php">Notifications</a>
                 </li>
                 <li>
-                  <a href="login.html">Change Password</a>
+                  <a href="Change Password.php">Change Password</a>
                 </li>
               </ul>
             </nav>
@@ -104,7 +104,7 @@
         </div>
         <div class="templatemo-content-container">
           <div class="templatemo-content-widget white-bg">
-            <h2 class="margin-bottom-10">Preferences</h2>
+            <h2 class="margin-bottom-10">Fill Profile</h2>
             <p>Update Your Details</p>
             <form action="pref.php" class="templatemo-login-form" method="post" enctype="multipart/form-data">
               <div class="row form-group">
@@ -232,8 +232,8 @@
             </form>
           </div>
           <footer class="text-right">
-           		<p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
+           		<p>Copyright &copy; 2023 VIIT-IMP | Developed by
+              Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
 			  </p>
           </footer>
         </div>

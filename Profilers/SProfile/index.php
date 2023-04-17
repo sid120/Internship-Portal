@@ -91,32 +91,28 @@
 					<h3>MEMBERS</h3>
 					<ul>
 						<li>
-							<a href="#">Customer Support</a>
+							<a href="https://www.viit.ac.in/placement-i2ic/from-desk-tpo">Placement Support</a>
 						</li>
 						<li>
-							<a href="#">Placement Support</a>
+							<a href="https://www.viit.ac.in/departments/information-technology-ug/faculty-info">Faculty Support</a>
 						</li>
 						<li>
-							<a href="#">Faculty Support</a>
+							<a href="https://www.viit.ac.in/placement-i2ic/our-recruiters-i2ic">Registered Companies</a>
 						</li>
 						<li>
-							<a href="#">Registered Companies</a>
-						</li>
-						<li>
-							<a href="#">Training</a>
+							<a href="https://www.viit.ac.in/placement-i2ic/training-2-placement">Training</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-md-3 get_in_touch ftr">
 					<h3>GET IN TOUCH</h3>
-					<p>NH4, Herur</p>
-					<p>Gubbi, Tumkur, India</p>
-					<p>08138-223818/223365</p>
-					<a href="mailto:cittumkur@rediffmail.com">cittumkur@rediffmail.com</a>
+					<p>Kondhwa, Pune, Maharashtra, India</p>
+					<p>XXXXXXX056</p>
+					<a href="mailto:studentsection@viit.ac.in">VIIT-Mail</a>
 				</div>
 				<div class="col-md-3 ftr-logo">
-					<p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
+					<p>Copyright &copy; 2023 VIIT-IMP | Developed by
+				Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a></a>
 			  </p>
 				</div>
 				</div>

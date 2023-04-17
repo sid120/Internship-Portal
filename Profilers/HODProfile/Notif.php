@@ -70,7 +70,7 @@
           <ul>
             <li><a href="login.php"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>           
             <li><a href="manage-student.php"><i class="fa fa-users fa-fw"></i>Manage Students</a></li>
-            <li><a href="#"><i class="fa fa-sliders fa-fw"></i>Preferences</a></li>
+            <li><a href="preferences.php"><i class="fa fa-sliders fa-fw"></i>Update Profile</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>
         </nav>
@@ -81,7 +81,7 @@
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-                  <li><a href="../../Homepage/indes.php">Home CIT-PMS</a></li>
+                  <li><a href="../../Homepage/index.php">Home VIIT-IMP</a></li>
                 <li><a href="../../Drives/index.php">Drives Home</a></li>
                 <li><a href="Notif.php">Notification</a></li>
                 <li><a href="Change Password.php">Change Password</a></li>
@@ -124,8 +124,8 @@
             </div>
           </div>
           <footer class="text-right">
-            <p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
+          <p>Copyright &copy; 2023 VIIT-IMP | Developed by
+              Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
           </footer>
         </div>
       </div>
