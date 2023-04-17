@@ -92,7 +92,7 @@
                   </div>
                   </center>
           <footer class="text-right">
-            <p>Copyright &copy; 2023 IMP-VIIT
+            <p>Copyright &copy; 2023 VIIT-IMP
              Mohit Deshpande, Om Bhavsar, Siddarth Rakshe, Siddhesh Dharmadhikari</a></p>
           </footer>
         </div>

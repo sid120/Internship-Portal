@@ -40,7 +40,7 @@
           </div>     
           
           <footer class="text-right">
-            <p>Copyright &copy; 2023 IMP-VIIT | Designed by
+            <p>Copyright &copy; 2023 VIIT-IMP | Designed by
               <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
             </p>
           </footer>      

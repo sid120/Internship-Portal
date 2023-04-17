@@ -121,7 +121,7 @@
 				</div>
 				<div class="col-md-3 ftr-logo">
 					<a href="index.php"><img src="images/wds.png" alt=""/></a>
-							<p>Copyright &copy; 2023 IMP-VIIT
+							<p>Copyright &copy; 2023 VIIT-IMP
               <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
 			  </p>
 				</div>

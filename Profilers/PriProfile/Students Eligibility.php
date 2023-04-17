@@ -72,7 +72,7 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                   <li>
-                  <a href="../../Homepage/index.php">Home IMP-VIIT</a>
+                  <a href="../../Homepage/index.php">Home VIIT-IMP</a>
                 </li>
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
@@ -155,7 +155,7 @@
           </div>     
           
           <footer class="text-right">
-             <p>Copyright &copy; 2023 IMP-VIIT | Developed by
+             <p>Copyright &copy; 2023 VIIT-IMP | Developed by
               <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a></p>
           </footer>      
         </div>

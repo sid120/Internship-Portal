@@ -115,7 +115,7 @@ if(isset($_SESSION['reset']))
 					<a href="mailto:studentsection@viit.ac.in">VIIT-Mail</a>
 				</div>
 				<div class="col-md-3 ftr-logo">
-					<p>Copyright &copy; 2023 IMP-VIIT | Developed by
+					<p>Copyright &copy; 2023 VIIT-IMP | Developed by
               <a>Mohit Deshpande, Om Bhavsar, Siddarth Rakshe, Siddhesh Dharmadhikari</a>
 				</div>
 				</div>

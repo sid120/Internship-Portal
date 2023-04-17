@@ -105,7 +105,7 @@
               
           </div>
           <footer class="text-right">
-           		<p>Copyright &copy; 2023 IMP-VIIT| Developed by
+           		<p>Copyright &copy; 2023 VIIT-IMP| Developed by
               <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
 			  </p>
           </footer>

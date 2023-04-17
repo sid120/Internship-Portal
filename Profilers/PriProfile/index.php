@@ -111,7 +111,7 @@
 					<a href="mailto:studentsection@viit.ac.in">VIIT-Mail</a>
 				</div>
 				<div class="col-md-3 ftr-logo">
-					<p>Copyright &copy; 2023 IMP-VIIT | Developed by
+					<p>Copyright &copy; 2023 VIIT-IMP | Developed by
               <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
 				</div>
 				
