@@ -97,18 +97,18 @@
 <div  class="templatemo-content-container" >
 <center>
 <?php			
-mysql_connect('localhost','root','');
-mysql_select_db('details');
-$RESULT=mysql_query("SELECT DISTINCT count(CompanyName) from addpdrive where PVenue LIKE '%CIT%' AND YEAR(Date)=YEAR(NOW())");
-$data=mysql_fetch_assoc($RESULT);
+$connect=mysqli_connect('localhost','root','',"details");
+mysqli_select_db($connect,'details');
+$RESULT=mysqli_query($connect,"SELECT DISTINCT count(CompanyName) from addpdrive where PVenue LIKE '%CIT%' AND YEAR(Date)=YEAR(NOW())");
+$data=mysqli_fetch_assoc($RESULT);
 echo "<br><br><h3>Companies In Our Campus In This Year&nbsp:&nbsp";
 echo $data['count(CompanyName)'];
-$RESULT=mysql_query("SELECT count(Attendence) from updatedrive where Attendence=1 AND YEAR(Date)=YEAR(NOW())");
-$data=mysql_fetch_assoc($RESULT);
+$RESULT=mysqli_query($connect,"SELECT count(Attendence) from updatedrive where Attendence=1 AND YEAR(Date)=YEAR(NOW())");
+$data=mysqli_fetch_assoc($RESULT);
 echo "<br><BR>Number of Students Attended In This Year&nbsp:&nbsp";
 echo $data['count(Attendence)'];
-$RESULT=mysql_query("SELECT count(Placed) from updatedrive where Placed=1 AND YEAR(Date)=YEAR(NOW())");
-$data=mysql_fetch_assoc($RESULT);
+$RESULT=mysqli_query($connect,"SELECT count(Placed) from updatedrive where Placed=1 AND YEAR(Date)=YEAR(NOW())");
+$data=mysqli_fetch_assoc($RESULT);
 echo "<BR><br>Number of Students Placed In This Year&nbsp:&nbsp";
 echo $data['count(Placed)'];
 echo "</h3>";
