@@ -40,8 +40,8 @@
           </div>     
           
           <footer class="text-right">
-            <p>Copyright &copy; 2015 CIT-PMS | Designed by
-              <a href="http://www.wafferdevelopers.com" target="_parent">Waffer Developers</a>
+            <p>Copyright &copy; 2023 IMP-VIIT | Designed by
+              <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
             </p>
           </footer>      
         </div>

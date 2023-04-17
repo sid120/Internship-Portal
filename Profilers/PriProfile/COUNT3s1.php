@@ -94,8 +94,8 @@ print "</tr>";
 			  </div>
 			  </div>
  <footer class="text-right">
-            <p>Copyright &copy; 2001-2015 CIT-PMS
-            |  Developed by <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a></p>
+            <p>Copyright &copy; 2023 IMP-VIIT
+            |  Developed by <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a></p>
           </footer>         
         </div>
       </div>
