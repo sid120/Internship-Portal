@@ -94,7 +94,7 @@
             <div class="templatemo-content-widget white-bg col-2">
               <i class="fa fa-times"></i>
               <div class="square"></div>
-              <h2 class="templatemo-inline-block">Welcome to CIT-PMS</h2><hr>
+              <h2 class="templatemo-inline-block">Welcome to IMP-VIIT</h2><hr>
               <p>There is a worth for everything so do logging in here. The Use of this is, You can View Student details, Check their Eligibility Criteria and U cvan look up drive details</p>    
               <p><a href="Students Eligibility.php">Check Students Eligibility</a></p>
               
@@ -225,8 +225,8 @@ echo "</h3>";
           </div> <!-- Second row ends -->
     
           <footer class="text-right">
-            <p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
+            <p>Copyright &copy; 2023 IMP-VIIT | Developed by
+              <a>Mohit Deshpande, Om Bhavsar, Siddharth Rakshe, Siddhesh Dharmadhikari</a>
             </p>
           </footer>       
         </div>
