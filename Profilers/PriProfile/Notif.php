@@ -80,7 +80,7 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                    <li>
-                  <a href="../../Homepage/index.php">Home CIT-PMS</a>
+                  <a href="../../Homepage/index.php">Home VIIT-IMP</a>
                 </li>
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
@@ -130,7 +130,7 @@
             </div>
           </div>
           <footer class="text-right">
-            <p>Copyright &copy; 2015 CIT-PMS | Developed by
+            <p>Copyright &copy; 2015 VIIT-IMP | Developed by
               <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
           </footer>
         </div>
