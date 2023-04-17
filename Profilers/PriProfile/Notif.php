@@ -130,8 +130,8 @@
             </div>
           </div>
           <footer class="text-right">
-            <p>Copyright &copy; 2015 VIIT-IMP | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
+          <p>Copyright &copy; 2023 VIIT-IMP| Developed by
+              <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
           </footer>
         </div>
       </div>
