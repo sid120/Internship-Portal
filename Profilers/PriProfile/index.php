@@ -109,14 +109,14 @@
 				</div>
 				<div class="col-md-3 get_in_touch ftr">
 					<h3>GET IN TOUCH</h3>
-					<p>NH4, Herur</p>
+					<p>Pune, Maharashtra</p>
 					<p>Gubbi, Tumkur, India</p>
-					<p>08138-223818/223365</p>
-					<a href="mailto:cittumkur@rediffmail.com">cittumkur@rediffmail.com</a>
+					<p>XXXXXXX056</p>
+					<a href="mailto:studentsection@viit.ac.in">VIIT-Mail</a>
 				</div>
 				<div class="col-md-3 ftr-logo">
-					<p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
+					<p>Copyright &copy; 2023 IMP-VIIT | Developed by
+              <a>Mohit Deshpande, Siddharth Rakshe, Om Bhavsar, Siddhesh Dharmadhikari</a>
 				</div>
 				
 			</div>
