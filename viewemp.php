@@ -8,8 +8,6 @@ $result = mysqli_query($conn, $sql);
 
 ?>
 
-
-
 <html>
 <head>
 	<title>View Employee |  Admin Panel | VIIT EMS</title>
