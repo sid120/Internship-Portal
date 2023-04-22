@@ -10,14 +10,14 @@
 
 <html>
 <head>
-	<title>Students Panel | VIIT EMS</title>
+	<title>Students Panel | VIIT IMP</title>
 	<link rel="stylesheet" type="text/css" href="styleview.css">
 </head>
 <body>
 	
 	<header>
 		<nav>
-			<h1>VIIT EMS</h1>
+			<h1>VIIT IMP</h1>
 			<ul id="navli">
 				<li><a class="homeblack" href="eloginwel.php?id=<?php echo $id?>"">HOME</a></li>
 				<li><a class="homeblack" href="myprofile.php?id=<?php echo $id?>"">My Profile</a></li>

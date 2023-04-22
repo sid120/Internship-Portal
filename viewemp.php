@@ -10,7 +10,7 @@ $result = mysqli_query($conn, $sql);
 
 <html>
 <head>
-	<title>View Students |  Admin Panel | VIIT EMS</title>
+	<title>View Students |  Admin Panel | VIIT IMP</title>
 	<link rel="stylesheet" type="text/css" href="styleview.css">
 </head>
 <body>
