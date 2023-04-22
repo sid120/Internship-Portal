@@ -24,7 +24,7 @@ $result3 = mysqli_query($conn, $sql3);
 
 <html>
 <head>
-	<title>Students Panel | VIIT EMS</title>
+	<title>Students Panel | VIIT IMP</title>
 	<link rel="stylesheet" type="text/css" href="styleemplogin.css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat" rel="stylesheet">
 </head>
@@ -32,7 +32,7 @@ $result3 = mysqli_query($conn, $sql3);
 	
 	<header>
 		<nav>
-			<h1>VIIT EMS</h1>
+			<h1>VIIT IMP</h1>
 			<ul id="navli">
 				<li><a class="homered" href="eloginwel.php?id=<?php echo $id?>"">HOME</a></li>
 				<li><a class="homeblack" href="myprofile.php?id=<?php echo $id?>"">My Profile</a></li>

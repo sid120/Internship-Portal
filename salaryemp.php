@@ -12,14 +12,14 @@ $result = mysqli_query($conn, $sql);
 
 <html>
 <head>
-	<title>Salary Table | VIIT EMS</title>
+	<title>Salary Table | VIIT IMP</title>
 	<link rel="stylesheet" type="text/css" href="styleview.css">
 </head>
 <body>
 	
 	<header>
 		<nav>
-			<h1>VIIT EMS</h1>
+			<h1>VIIT IMP</h1>
 			<ul id="navli">
 				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
 				

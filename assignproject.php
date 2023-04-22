@@ -18,7 +18,7 @@ $result = mysqli_query($conn, $sql);
 <body>
 	<header>
 		<nav>
-			<h1>VIIT EMS</h1>
+			<h1>VIIT IMP</h1>
 			<ul id="navli">
 				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
 				<li><a class="homeblack" href="addemp.php">Add Students</a></li>
