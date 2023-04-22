@@ -39,19 +39,16 @@ $result = mysqli_query($conn, $sql);
 				<th align = "center">Picture</th>
 				<th align = "center">Name</th>
 				<th align = "center">Email</th>
-				
 				<th align = "center">Gender</th>
 				<th align = "center">Contact</th>
 				<th align = "center">Company</th>
 				<th align = "center">Department</th>
 				<th align = "center">Point</th>
-				
-				
 				<th align = "center">Options</th>
 			</tr>
 
 			<?php
-				$query = "SELECT * FROM `project`";
+				$query = "SELECT * FROM `flogin`";
 				while ($employee = mysqli_fetch_assoc($result)) {
 					echo "<tr>";
 					echo "<td>".$employee['id']."</td>";
@@ -66,7 +63,7 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['dept']."</td>";
 					echo "<td>".$employee['points']."</td>";
 					
-					echo "<td> <form action='' method='post'> <select name = 'faculty' value=''>";
+					echo "<td> <form action='process/assignfacprocess.php' method='post'> <select name = 'faculty' value=''>";
 
 					echo "<option value=''>Select Faculty</option>";
 
@@ -76,9 +73,7 @@ $result = mysqli_query($conn, $sql);
 					}
 					
 					$Select_name=$_POST['faculty'];
-					echo "</select> <input type='submit' name='button' value='Assign'></form></td>";
-
-					
+					echo "</select> <input type='submit' name='button' value='Assign' href=\"process/assignstudprocess.php?id=$employee[id]\"></form></td>";
 
 				}
 

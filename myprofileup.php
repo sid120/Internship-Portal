@@ -111,7 +111,7 @@ if(isset($_POST['update']))
 
                         
                          <div class="input-group">
-                          <p>Address</p>
+                          <p>Company</p>
                             <input class="input--style-1" type="text"  name="address" value="<?php echo $address;?>">
                         </div>
 
