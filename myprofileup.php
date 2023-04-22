@@ -91,7 +91,7 @@ if(isset($_POST['update']))
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Update Employee Info</h2>
+                    <h2 class="title">Update Students Info</h2>
                     <form id = "registration" action="myprofileup.php" method="POST">
 
 

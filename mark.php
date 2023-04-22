@@ -94,12 +94,12 @@ if(isset($_POST['update']))
       <h1>VIIT EMS</h1>
       <ul id="navli">
         <li><a class="homeblack" href="aloginwel.php">HOME</a></li>
-        <li><a class="homeblack" href="addemp.php">Add Employee</a></li>
-        <li><a class="homeblack" href="viewemp.php">View Employee</a></li>
+        <li><a class="homeblack" href="addemp.php">Add Students</a></li>
+        <li><a class="homeblack" href="viewemp.php">View Students</a></li>
         <li><a class="homeblack" href="assign.php">Assign Project</a></li>
         <li><a class="homered" href="assignproject.php">Project Status</a></li>
         <li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
-        <li><a class="homeblack" href="empleave.php">Employee Leave</a></li>
+        <li><a class="homeblack" href="empleave.php">Students Leave</a></li>
         <li><a class="homeblack" href="alogin.html">Log Out</a></li>
       </ul>
     </nav>
@@ -126,7 +126,7 @@ if(isset($_POST['update']))
                        
                         
                         <div class="input-group">
-                          <p>Employee Name</p>
+                          <p>Students Name</p>
                             <input class="input--style-1" type="text" name="firstName" value="<?php echo $firstName;?> <?php echo $lastName;?>" readonly>
                         </div>
 

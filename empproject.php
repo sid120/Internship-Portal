@@ -10,7 +10,7 @@
 
 <html>
 <head>
-	<title>Employee Panel | VIIT EMS</title>
+	<title>Students Panel | VIIT EMS</title>
 	<link rel="stylesheet" type="text/css" href="styleview.css">
 </head>
 <body>

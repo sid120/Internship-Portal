@@ -10,7 +10,7 @@
 
 <html>
 <head>
-	<title>Apply Leave | Employee Panel | VIIT EMS</title>
+	<title>Apply Leave | Students Panel | VIIT EMS</title>
 	<link rel="stylesheet" type="text/css" href="styleapply.css">
 </head>
 <body bgcolor="#F0FFFF">
