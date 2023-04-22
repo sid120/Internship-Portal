@@ -55,7 +55,7 @@ if(isset($_POST['update']))
 
 <html>
 <head>
-  <title>Update Profile | VIIT EMS</title>
+  <title>Update Profile | VIIT IMP</title>
   <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
@@ -72,7 +72,7 @@ if(isset($_POST['update']))
 <body>
   <header>
     <nav>
-      <h1>VIIT EMS</h1>
+      <h1>VIIT IMP</h1>
       <ul id="navli">
         <li><a class="homeblack" href="eloginwel.php?id=<?php echo $id?>"">HOME</a></li>
         <li><a class="homered" href="myprofile.php?id=<?php echo $id?>"">My Profile</a></li>
@@ -91,7 +91,7 @@ if(isset($_POST['update']))
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Update Employee Info</h2>
+                    <h2 class="title">Update Students Info</h2>
                     <form id = "registration" action="myprofileup.php" method="POST">
 
 

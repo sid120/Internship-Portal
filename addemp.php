@@ -5,7 +5,7 @@
    
 
     <!-- Title Page-->
-    <title>Add Employee | Admin Panel</title>
+    <title>Add Students | Admin Panel</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -27,12 +27,12 @@
             <h1>VIIT EMS</h1>
             <ul id="navli">
                 <li><a class="homeblack" href="aloginwel.php">HOME</a></li>
-                <li><a class="homered" href="addemp.php">Add Employee</a></li>
-                <li><a class="homeblack" href="viewemp.php">View Employee</a></li>
+                <li><a class="homered" href="addemp.php">Add Students</a></li>
+                <li><a class="homeblack" href="viewemp.php">View Students</a></li>
                 <li><a class="homeblack" href="assign.php">Assign Project</a></li>
                 <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
                 <li><a class="homeblack" href="salaryemp.php">Salary Table</a></li> 
-                <li><a class="homeblack" href="empleave.php">Employee Leave</a></li>
+                <li><a class="homeblack" href="empleave.php">Students Leave</a></li>
                 <li><a class="homeblack" href="alogin.html">Log Out</a></li>
             </ul>
         </nav>
