@@ -9,6 +9,8 @@
 
 # CMD ["start-apache"]
 # CMD [ "start-Mysql" ]
+# CMD ["start-apache"]
+# CMD [ "start-Mysql" ]
 
 FROM php:7.1.23-apache
 COPY . /var/www/html

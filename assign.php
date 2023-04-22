@@ -27,12 +27,12 @@
             <h1>VIIT EMS</h1>
             <ul id="navli">
                 <li><a class="homeblack" href="aloginwel.php">HOME</a></li>
-                <li><a class="homeblack" href="addemp.php">Add Employee</a></li>
-                <li><a class="homeblack" href="viewemp.php">View Employee</a></li>
+                <li><a class="homeblack" href="addemp.php">Add Students</a></li>
+                <li><a class="homeblack" href="viewemp.php">View Students</a></li>
                 <li><a class="homered" href="assign.php">Assign Project</a></li>
                 <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
                 <li><a class="homeblack" href="salaryemp.php">Salary Table</a></li> 
-                <li><a class="homeblack" href="empleave.php">Employee Leave</a></li>
+                <li><a class="homeblack" href="empleave.php">Students Leave</a></li>
                 <li><a class="homeblack" href="alogin.html">Log Out</a></li>
             </ul>
         </nav>
@@ -55,7 +55,7 @@
                         
 
                          <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Employee ID" name="eid" required="required">
+                            <input class="input--style-1" type="text" placeholder="Students ID" name="eid" required="required">
                         </div>
 
 

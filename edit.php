@@ -66,7 +66,7 @@ $result = mysqli_query($conn, "UPDATE `employee` SET `firstName`='$firstname',`l
 
 <html>
 <head>
-	<title>View Employee |  Admin Panel | VIIT EMS</title>
+	<title>View Students |  Admin Panel | VIIT EMS</title>
 	<!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
@@ -86,8 +86,8 @@ $result = mysqli_query($conn, "UPDATE `employee` SET `firstName`='$firstname',`l
 			<h1>VIIT EMS</h1>
 			<ul id="navli">
 				<li><a class="homeblack" href="index.html">HOME</a></li>
-				<li><a class="homeblack" href="addemp.php">Add Employee</a></li>
-				<li><a class="homered" href="viewemp.php">View Employee</a></li>
+				<li><a class="homeblack" href="addemp.php">Add Students</a></li>
+				<li><a class="homered" href="viewemp.php">View Students</a></li>
 				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
 			</ul>
 		</nav>
@@ -102,7 +102,7 @@ $result = mysqli_query($conn, "UPDATE `employee` SET `firstName`='$firstname',`l
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Update Employee Info</h2>
+                    <h2 class="title">Update Students Info</h2>
                     <form id = "registration" action="edit.php" method="POST">
 
                         <div class="row row-space">
