@@ -12,14 +12,14 @@ $result = mysqli_query($conn, $sql);
 
 <html>
 <head>
-	<title>Admin Panel | VIIT EMS</title>
+	<title>Faculty Panel | VIIT IMP</title>
 	<link rel="stylesheet" type="text/css" href="styleemplogin.css">
 </head>
 <body>
 	
 	<header>
 		<nav>
-			<h1>VIIT EMS</h1>
+			<h1>VIIT IMP</h1>
 			<ul id="navli">
 				<li><a class="homered" href="floginwel.php">HOME</a></li>
 				<!-- <li><a class="homeblack" href="addemp.php">Add Employee</a></li>
@@ -35,13 +35,14 @@ $result = mysqli_query($conn, $sql);
 	 
 	<div class="divider"></div>
 	<div id="divimg">
-		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Empolyee Leaderboard </h2>
+		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Students List</h2>
     	<table>
 
 			<tr bgcolor="#000">
 				<th align = "center">Seq.</th>
 				<th align = "center">Student. ID</th>
 				<th align = "center">Name</th>
+				<th align = "center">Company</th>
 				<th align = "center">Points</th>
 			</tr>
 
@@ -55,6 +56,8 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['id']."</td>";
 					
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
+
+					echo "<td>".$employee['address']."</td>";
 					
 					echo "<td>".$employee['points']."</td>";
 					
@@ -66,9 +69,9 @@ $result = mysqli_query($conn, $sql);
 
 		</table>
 
-		<div class="p-t-20">
+		<!-- <div class="p-t-20">
 			<button class="btn btn--radius btn--green" type="submit" style="float: right; margin-right: 60px"><a href="reset.php" style="text-decoration: none; color: white"> Reset Points</button>
-		</div>
+		</div> -->
 
 		
 	</div>

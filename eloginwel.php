@@ -6,7 +6,7 @@
 	 $employeen = mysqli_fetch_array($result1);
 	 $empName = ($employeen['firstName']);
 
-	$sql = "SELECT id, firstName, lastName,  points FROM employee, rank WHERE rank.eid = employee.id order by rank.points desc";
+	$sql = "SELECT id, firstName, lastName,  address, points FROM employee, rank WHERE rank.eid = employee.id order by rank.points desc";
 	$sql1 = "SELECT `pname`, `duedate` FROM `project` WHERE eid = $id and status = 'Due'";
 
 	$sql2 = "Select * From employee, employee_leave Where employee.id = $id and employee_leave.id = $id order by employee_leave.token";
@@ -48,13 +48,14 @@ $result3 = mysqli_query($conn, $sql3);
 	<div>
 		<!-- <h2>Welcome <?php echo "$empName"; ?> </h2> -->
 
-		    	<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Students Leaderboard </h2>
+		    	<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Students List</h2>
     	<table>
 
 			<tr bgcolor="#000">
 				<th align = "center">Seq.</th>
-				<th align = "center">Emp. ID</th>
+				<th align = "center">Student. ID</th>
 				<th align = "center">Name</th>
+				<th align = "center">Company</th>
 				<th align = "center">Points</th>
 				
 
@@ -70,6 +71,8 @@ $result3 = mysqli_query($conn, $sql3);
 					echo "<td>".$employee['id']."</td>";
 					
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
+
+					echo "<td>".$employee['address']."</td>";
 					
 					echo "<td>".$employee['points']."</td>";
 					

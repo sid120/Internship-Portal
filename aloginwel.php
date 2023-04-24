@@ -1,6 +1,6 @@
 <?php 
 require_once ('process/dbh.php');
-$sql = "SELECT id, firstName, lastName,  points FROM employee, rank WHERE rank.eid = employee.id order by rank.points desc";
+$sql = "SELECT id, firstName, lastName, address,points FROM employee, rank WHERE rank.eid = employee.id order by rank.points desc";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -35,8 +35,9 @@ $result = mysqli_query($conn, $sql);
 
 			<tr bgcolor="#000">
 				<th align = "center">Seq.</th>
-				<th align = "center">Emp. ID</th>
+				<th align = "center">Student. ID</th>
 				<th align = "center">Name</th>
+				<th align = "center">Company</th>
 				<th align = "center">Points</th>
 			</tr>
 
@@ -50,6 +51,8 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['id']."</td>";
 					
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
+
+					echo "<td>".$employee['address']."</td>";
 					
 					echo "<td>".$employee['points']."</td>";
 					
@@ -61,9 +64,9 @@ $result = mysqli_query($conn, $sql);
 
 		</table>
 
-		<div class="p-t-20">
+		<!-- <div class="p-t-20">
 			<button class="btn btn--radius btn--green" type="submit" style="float: right; margin-right: 60px"><a href="reset.php" style="text-decoration: none; color: white"> Reset Points</button>
-		</div>
+		</div> -->
 
 		
 	</div>

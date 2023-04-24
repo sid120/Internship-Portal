@@ -35,7 +35,7 @@ $result = mysqli_query($conn, $sql);
 		<table>
 			<tr>
 
-				<th align = "center">Emp. ID</th>
+				<th align = "center">Student. ID</th>
 				<th align = "center">Picture</th>
 				<th align = "center">Name</th>
 				<th align = "center">Email</th>
