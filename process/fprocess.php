@@ -13,7 +13,7 @@ $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) == 1){
 	//echo ("logged in");
-	header("Location: ..//floginwel.php");
+	header("Location: ..//floginwel.php?email=$email");
 }
 
 else{

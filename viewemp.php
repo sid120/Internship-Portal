@@ -62,9 +62,9 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['address']."</td>";
 					echo "<td>".$employee['dept']."</td>";
 					echo "<td>".$employee['points']."</td>";
+					$Select_name = 0;
+					echo "<td> <form action='process/assignfacprocess.php?id=$employee[id]' method='post'> <select name = 'faculty' value=''>";
 					
-					echo "<td> <form action='process/assignfacprocess.php' method='post'> <select name = 'faculty' value=''>";
-
 					echo "<option value=''>Select Faculty</option>";
 
 					foreach ($conn->query($query) as $row){
@@ -73,7 +73,7 @@ $result = mysqli_query($conn, $sql);
 					}
 					
 					$Select_name=$_POST['faculty'];
-					echo "</select> <input type='submit' name='button' value='Assign' href=\"process/assignstudprocess.php?id=$employee[id]\"></form></td>";
+					echo "</select> <input type='submit' name='button' value='Assign'></form></td>";
 
 				}
 

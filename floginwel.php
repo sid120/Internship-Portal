@@ -1,6 +1,11 @@
 <?php 
 require_once ('process/dbh.php');
-$sql = "SELECT id, firstName, lastName,  points FROM employee, rank WHERE rank.eid = employee.id order by rank.points desc";
+$email= $_GET['email'];
+$sql1 = "SELECT * FROM flogin WHERE email = '$email'";
+$result1 = mysqli_query($conn, $sql1);
+$faculty = mysqli_fetch_assoc($result1);
+$pid = $faculty['pid'];
+$sql = "SELECT * FROM employee,rank WHERE pid = $pid and rank.eid = employee.id";
 $result = mysqli_query($conn, $sql);
 ?>
 
