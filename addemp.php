@@ -5,7 +5,7 @@
    
 
     <!-- Title Page-->
-    <title>Add Students | Admin Panel</title>
+    <title>Student Registartion</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -24,23 +24,23 @@
 <body>
     <header>
         <nav>
-            <h1>VIIT EMS</h1>
+            <h1>VIIT IMP</h1>
             <ul id="navli">
-                <li><a class="homeblack" href="aloginwel.php">HOME</a></li>
-                <li><a class="homered" href="addemp.php">Add Students</a></li>
-                <li><a class="homeblack" href="viewemp.php">View Students</a></li>
-                <li><a class="homeblack" href="assign.php">Assign Project</a></li>
-                <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
-                <li><a class="homeblack" href="salaryemp.php">Salary Table</a></li> 
-                <li><a class="homeblack" href="empleave.php">Students Leave</a></li>
-                <li><a class="homeblack" href="alogin.html">Log Out</a></li>
+            <li><a class="homeblack" href="aloginwel.php">HOME</a></li>
+				<li><a class="homered" href="addemp.php">Add Students</a></li>
+				<li><a class="homeblack" href="viewemp.php">View Students</a></li>
+				<!-- <li><a class="homeblack" href="assign.php">Assign Project</a></li>
+				<li><a class="homeblack" href="assignproject.php">Project Status</a></li>
+				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
+				<li><a class="homeblack" href="empleave.php">Students Leave</a></li> -->
+				<li><a class="homeblack" href="alogin.html">Log Out</a></li>
             </ul>
         </nav>
     </header>
     
     <div class="divider"></div>
 
-
+    
 
 
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
@@ -69,19 +69,17 @@
 
 
 
-
+                        <div class="input-group">
+                            <input class="input--style-1" type="number" placeholder="PRN" name="PRN" required="required">
+                        </div>
 
                         <div class="input-group">
                             <input class="input--style-1" type="email" placeholder="Email" name="email" required="required">
                         </div>
-                        <p>Birthday</p>
+
+
+                        
                         <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-1" type="date" placeholder="BIRTHDATE" name="birthday" required="required">
-                                   
-                                </div>
-                            </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
@@ -102,35 +100,20 @@
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="number" placeholder="NID" name="nid" required="required">
-                        </div>
-
-                        
-                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Address" name="address" required="required">
-                        </div>
-
-                        <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="Department" name="dept" required="required">
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Degree" name="degree" required="required">
+                            <input class="input--style-1" type="password" placeholder="Password" name="pass" required="required">
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="number" placeholder="Salary" name="salary">
+                            <input class="input--style-1" type="password" placeholder="Confirm Password" name="Cpass" required="required">
                         </div>
 
                         <div class="input-group">
                             <input class="input--style-1" type="file" placeholder="file" name="file">
                         </div>
-
-
-
-
-
-
 
                         <div class="p-t-20">
                             <button class="btn btn--radius btn--green" type="submit">Submit</button>

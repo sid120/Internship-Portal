@@ -36,8 +36,8 @@ $result3 = mysqli_query($conn, $sql3);
 			<ul id="navli">
 				<li><a class="homered" href="eloginwel.php?id=<?php echo $id?>"">HOME</a></li>
 				<li><a class="homeblack" href="myprofile.php?id=<?php echo $id?>"">My Profile</a></li>
-				<li><a class="homeblack" href="empproject.php?id=<?php echo $id?>"">My Projects</a></li>
-				<li><a class="homeblack" href="applyleave.php?id=<?php echo $id?>"">Apply Leave</a></li>
+				<!-- <li><a class="homeblack" href="empproject.php?id=<?php echo $id?>"">My Projects</a></li>
+				<li><a class="homeblack" href="applyleave.php?id=<?php echo $id?>"">Apply Leave</a></li> -->
 				<li><a class="homeblack" href="elogin.html">Log Out</a></li>
 			</ul>
 		</nav>
@@ -81,7 +81,7 @@ $result3 = mysqli_query($conn, $sql3);
 
 		</table>
    
-    	<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Due Projects</h2>
+    	<!-- <h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Due Projects</h2>
     	
 
     	<table>
@@ -107,11 +107,11 @@ $result3 = mysqli_query($conn, $sql3);
 
 			?>
 
-		</table>
+		</table> -->
 
 
 
-		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Salary Status</h2>
+		<!-- <h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Salary Status</h2>
     	
 
     	<table>
@@ -145,7 +145,7 @@ $result3 = mysqli_query($conn, $sql3);
 
 			?>
 
-		</table>
+		</table> -->
 
 
 
@@ -156,7 +156,7 @@ $result3 = mysqli_query($conn, $sql3);
 
 
 
-		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Leave Status</h2>
+		<!-- <h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Leave Status</h2>
     	
 
     	<table>
@@ -196,7 +196,7 @@ $result3 = mysqli_query($conn, $sql3);
 
 			?>
 
-		</table>
+		</table> -->
 
 
 

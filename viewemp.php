@@ -21,10 +21,10 @@ $result = mysqli_query($conn, $sql);
 				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
 				<li><a class="homeblack" href="addemp.php">Add Students</a></li>
 				<li><a class="homered" href="viewemp.php">View Students</a></li>
-				<li><a class="homeblack" href="assign.php">Assign Project</a></li>
+				<!-- <li><a class="homeblack" href="assign.php">Assign Project</a></li>
 				<li><a class="homeblack" href="assignproject.php">Project Status</a></li>
 				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
-				<li><a class="homeblack" href="empleave.php">Students Leave</a></li>
+				<li><a class="homeblack" href="empleave.php">Students Leave</a></li> -->
 				<li><a class="homeblack" href="alogin.html">Log Out</a></li>
 			</ul>
 		</nav>
@@ -76,8 +76,6 @@ $result = mysqli_query($conn, $sql);
 					echo "</select> <input type='submit' name='button' value='Assign'></form></td>";
 
 				}
-
-				echo 'You have chosen: ' . $Select_name;
 
 
 			?>
