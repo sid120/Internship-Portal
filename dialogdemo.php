@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Dialog Box with Form Elements</title>
+	<link rel="stylesheet" type="text/css" href="styleemplogin.css">
+
 </head>
 <body>
 	<?php
@@ -13,26 +15,57 @@
 		}
 	?>
 
-	<button onclick="document.getElementById('dialog').showModal();">Mark Review</button>
 
 	<dialog id="dialog">
+	<link rel="stylesheet" type="text/css" href="dialogdemo.css">
+
 		<form method="POST" enctype="multipart/form-data">
 			<label for="dropdown">Select an Option:</label>
 			<select name="dropdown" id="dropdown">
-				<option value="option1">Option 1</option>
-				<option value="option2">Option 2</option>
-				<option value="option3">Option 3</option>
+				<option value="option1"> Review 1</option>
+				<option value="option2"> Review 2</option>
+				<option value="option3"> Review 3</option>
 			</select>
 			<br><br>
 			<label for="file">Choose a File:</label>
 			<input type="file" name="file" id="file">
 			<br><br>
-			<label for="input">Enter Some Text:</label>
+			<label for="input">Enter Marks:</label>
 			<input type="text" name="input" id="input">
 			<br><br>
 			<button type="submit" name="submit">Submit</button>
 			<button type="button" onclick="document.getElementById('dialog').close();">Cancel</button>
 		</form>
+		
+
 	</dialog>
+
+	<div class="divider"></div>
+	<div id="divimg">
+		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Students List</h2>
+    	<table>
+
+			<tr bgcolor="#0000">
+				
+				<th align = "center">Review-1</th>
+				<th align = "center">Review-2</th>
+				<th align = "center">Final-Exam</th>
+			</tr>
+
+			
+		</table>
+
+
+
+		<!-- <div class="p-t-20">
+			<button class="btn btn--radius btn--green" type="submit" style="float: right; margin-right: 60px"><a href="dialogdemo.php" style="text-decoration: none; color: white"> demo</button>
+		</div>  -->
+		
+	</div>
+	
+		<div class="mark-review-container" style="text-align: center; ">
+		<link rel="stylesheet" type="text/css" href="dialogdemo.css">
+  		<button onclick="document.getElementById('dialog').showModal();" style="display: block; margin: auto; color: white;  ">Mark Review</button>
+		</div>
 </body>
 </html>
