@@ -4,7 +4,7 @@
 require_once ('process/dbh.php');
 $id = (isset($_GET['id']) ? $_GET['id'] : '');
 $pid = (isset($_GET['pid']) ? $_GET['pid'] : '');
-$sql = "SELECT pid,project.eid, pname, duedate, subdate, mark, points, firstName, lastName, base, bonus, total FROM `project` , `rank` ,`employee`, `salary` WHERE project.eid = '$id' AND pid = '$pid'";
+$sql = "SELECT pid,project.eid, pname, duedate, subdate, mark, points, firstName, lastName FROM `project` , `rank` ,`employee` WHERE project.eid = '$id' AND pid = '$pid' AND pid < 1000";
 
 //echo "$sql";
 $result = mysqli_query($conn, $sql);
@@ -17,9 +17,9 @@ if(isset($_POST['update']))
 
   $mark = mysqli_real_escape_string($conn, $_POST['mark']);
   $points = mysqli_real_escape_string($conn, $_POST['points']);
-  $base = mysqli_real_escape_string($conn, $_POST['base']);
-  $bonus = mysqli_real_escape_string($conn, $_POST['bonus']);
-  $total = mysqli_real_escape_string($conn, $_POST['total']);
+  //$base = mysqli_real_escape_string($conn, $_POST['base']);
+  //$bonus = mysqli_real_escape_string($conn, $_POST['bonus']);
+  //$total = mysqli_real_escape_string($conn, $_POST['total']);
 
   $upPoint = $points+$mark;
   
@@ -52,7 +52,7 @@ if(isset($_POST['update']))
 <?php
   $id = (isset($_GET['id']) ? $_GET['id'] : '');
   $pid = (isset($_GET['pid']) ? $_GET['pid'] : '');
-  $sql1 = "SELECT pid, project.eid, project.pname, project.duedate, project.subdate, project.mark, rank.points, employee.firstName, employee.lastName, salary.base, salary.bonus, salary.total FROM `project` , `rank` ,`employee`, `salary`  WHERE project.eid = $id AND project.pid = $pid AND project.eid = rank.eid AND salary.id = project.eid AND employee.id = project.eid AND employee.id = rank.eid";
+  $sql1 = "SELECT pid, project.eid, project.pname, project.duedate, project.subdate, project.mark, rank.points, employee.firstName, employee.lastName FROM `project` , `rank` ,`employee` WHERE project.eid = $id AND project.pid = $pid AND project.eid = rank.eid AND employee.id = project.eid AND employee.id = rank.eid";
   $result1 = mysqli_query($conn, $sql1);
   if($result1){
   while($res = mysqli_fetch_assoc($result1)){

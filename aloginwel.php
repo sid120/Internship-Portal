@@ -19,8 +19,8 @@ $result = mysqli_query($conn, $sql);
 				<li><a class="homered" href="aloginwel.php">HOME</a></li>
 				<li><a class="homeblack" href="addemp.php">Add Students</a></li>
 				<li><a class="homeblack" href="viewemp.php">View Students</a></li>
-				<!-- <li><a class="homeblack" href="assign.php">Assign Project</a></li>
-				<li><a class="homeblack" href="assignproject.php">Project Status</a></li>
+				<li><a class="homeblack" href="assign.php">Schedule Review</a></li>
+				<!-- <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
 				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
 				<li><a class="homeblack" href="empleave.php">Students Leave</a></li> -->
 				<li><a class="homeblack" href="alogin.html">Log Out</a></li>
@@ -58,8 +58,6 @@ $result = mysqli_query($conn, $sql);
 					
 					$seq+=1;
 				}
-
-
 			?>
 
 		</table>
