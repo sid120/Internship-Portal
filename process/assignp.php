@@ -13,23 +13,28 @@ $review = $_POST['Reviews'];
 
 //$result = mysqli_query($conn, $sql);
 
-$sql = "SELECT * FROM `flogin` WHERE pid = $pid";
-$result = mysqli_query($conn, $sql);
-
-$pname = "#";
-$femail = "#";
-
-while($faculty = mysqli_fetch_assoc($result))
+if(strcmp($review,"Review 1") == 0)
 {
-    $pname = $faculty['pname'];
-    $femail = $faculty['email'];
+    $sql = "UPDATE `employee` SET `Review1`= '$subdate' WHERE `pid` = $pid";
+    $result = mysqli_query($conn, $sql);    
+}
+else if(strcmp($review,"Review 2") == 0){
+    $sql = "UPDATE `employee` SET `Review2` = '$subdate' WHERE `pid` = $pid";
+    $result = mysqli_query($conn, $sql);
+}
+else if(strcmp($review,"Final Exam") == 0){
+    $sql = "UPDATE `employee` SET `FinalExam` = '$subdate' WHERE `pid` = $pid";
+    $result = mysqli_query($conn, $sql);
 }
 
 
-$sql = "UPDATE ``";
-$result = mysqli_query($conn, $sql);
-
-
+if(($result) == 1)
+{
+    echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.alert('$review Scheduled Successfully')
+    window.location.href='javascript:history.go(-1)';
+    </SCRIPT>");
+}
 
 
 
