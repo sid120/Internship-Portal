@@ -5,7 +5,7 @@ $sql1 = "SELECT * FROM flogin WHERE email = '$email'";
 $result1 = mysqli_query($conn, $sql1);
 $faculty = mysqli_fetch_assoc($result1);
 $pid = $faculty['pid'];
-$sql = "SELECT * FROM employee,rank WHERE pid = $pid and rank.eid = employee.id";
+$sql = "SELECT * FROM employee, `rank` WHERE pid = $pid and `rank`.eid = employee.id";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -63,6 +63,9 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>";
 						echo "<button><a href='dialogdemo.php'>REVIEW</button>";
 					echo "</td>";
+					
+					
+
 
 					$seq+=1;
 				}
