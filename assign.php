@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+
+<?php
+
+require_once ('process/dbh.php');
+$sql = "SELECT * from `employee` , `rank` WHERE employee.id = rank.eid";
+
+//echo "$sql";
+$result = mysqli_query($conn, $sql);
+
+?>
 <html>
 
 <head>
@@ -29,10 +39,10 @@
                 <li><a class="homeblack" href="aloginwel.php">HOME</a></li>
                 <li><a class="homeblack" href="addemp.php">Add Students</a></li>
                 <li><a class="homeblack" href="viewemp.php">View Students</a></li>
-                <li><a class="homered" href="assign.php">Assign Project</a></li>
-                <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
+                <li><a class="homered" href="assign.php">Schedule Review</a></li>
+                <!-- <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
                 <li><a class="homeblack" href="salaryemp.php">Salary Table</a></li> 
-                <li><a class="homeblack" href="empleave.php">Students Leave</a></li>
+                <li><a class="homeblack" href="empleave.php">Students Leave</a></li> -->
                 <li><a class="homeblack" href="alogin.html">Log Out</a></li>
             </ul>
         </nav>
@@ -48,23 +58,52 @@
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Assign Project</h2>
+                    <h2 class="title">Schedule Review</h2>
                     <form action="process/assignp.php" method="POST" enctype="multipart/form-data">
 
 
-                        
-
-                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Students ID" name="eid" required="required">
+                    <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="Reviews">
+                                            <option disabled="disabled" selected="selected">Select Review</option>
+                                            <option value="Review 1">Review 1</option>
+                                            <option value="Review 2">Review 2</option>
+                                            <option value="Final Exam">Final Exam</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                        <?php
+				            $query = "SELECT * FROM `flogin`";
+					        $Select_name = 0;
 
+                            echo "<td> <select name = 'faculty' value=''>";
 
+					        echo "<option value='' disabled='disabled' selected='selected'>Select Faculty</option>";
 
+					        foreach ($conn->query($query) as $row){
 
-                        <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Project Name" name="pname" required="required">
+						        echo "<option value=$row[pid]>$row[pname]</option>";
+					        }
+					
+					        $Select_name=$_POST['faculty'];
+					        echo "</select>";
+                            ?>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -75,12 +114,8 @@
                             
                         </div>
                         
-                        
-
-
-
                         <div class="p-t-20">
-                            <button class="btn btn--radius btn--green" type="submit">Assign</button>
+                            <button class="btn btn--radius btn--green" type="submit">Schedule</button>
                         </div>
                     </form>
                 </div>

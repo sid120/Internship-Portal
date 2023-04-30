@@ -44,9 +44,8 @@ $result = mysqli_query($conn, $sql);
 				<th align = "center">Name</th>
 				<th align = "center">Company</th>
 				<th align = "center">Points</th>
+				<th align = "center">Review</th>
 			</tr>
-
-			
 
 			<?php
 				$seq = 1;
@@ -60,19 +59,20 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['address']."</td>";
 					
 					echo "<td>".$employee['points']."</td>";
-					
+
+					echo "<td>";
+						echo "<button><a href='dialogdemo.php'>REVIEW</button>";
+					echo "</td>";
+
 					$seq+=1;
 				}
 
-
 			?>
-
 		</table>
 
 		<!-- <div class="p-t-20">
-			<button class="btn btn--radius btn--green" type="submit" style="float: right; margin-right: 60px"><a href="reset.php" style="text-decoration: none; color: white"> Reset Points</button>
-		</div> -->
-
+			<button class="btn btn--radius btn--green" type="submit" style="float: right; margin-right: 60px"><a href="dialogdemo.php" style="text-decoration: none; color: white"> demo</button>
+		</div>  -->
 		
 	</div>
 </body>
