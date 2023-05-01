@@ -1,11 +1,19 @@
 <?php 
 	$id = (isset($_GET['id']) ? $_GET['id'] : '');
 	require_once ('process/dbh.php');
-	 $sql1 = "SELECT * FROM `employee` where id = '$id'";
+	 $sql1 = "SELECT `pid` FROM `employee` where id = '$id'";
 	 $result1 = mysqli_query($conn, $sql1);
 	 $employeen = mysqli_fetch_array($result1);
-	 $empName = ($employeen['firstName']);
+	 $pid = ($employeen['pid']);
+	 $sqlf = "SELECT * FROM `flogin` where pid = '$pid'";
+	 $resultf = mysqli_query($conn, $sqlf);
+	 $faculty = mysqli_fetch_array($resultf);	
+	 $pname = ($faculty['pname']);
+	 if(isset($pname)){
+		
+	 }
 
+	$sqlE = "SELECT * FROM `employee` where id = '$id'";
 	$sql = "SELECT id, firstName, lastName,  address, points FROM employee, rank WHERE rank.eid = employee.id order by rank.points desc";
 	$sql1 = "SELECT `pname`, `duedate` FROM `project` WHERE eid = $id and status = 'Due'";
 
@@ -14,10 +22,13 @@
 	$sql3 = "SELECT * FROM `salary` WHERE id = $id";
 
 //echo "$sql";
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sqlE);
 $result1 = mysqli_query($conn, $sql1);
 $result2 = mysqli_query($conn, $sql2);
 $result3 = mysqli_query($conn, $sql3);
+
+
+
 ?>
 
 
@@ -52,29 +63,27 @@ $result3 = mysqli_query($conn, $sql3);
     	<table>
 
 			<tr bgcolor="#000">
-				<th align = "center">Seq.</th>
-				<th align = "center">Student. ID</th>
-				<th align = "center">Name</th>
-				<th align = "center">Company</th>
-				<th align = "center">Points</th>
-				
-
-			</tr>
-
-			
+				<th align = "center">Review 1</th>
+				<th align = "center">Review 2</th>
+				<th align = "center">Final Eaxm</th>
+				<th align = "center">Company Mentor</th>
+				<th align = "center">Faculty</th>
+			</tr>			
 
 			<?php
 				$seq = 1;
+
 				while ($employee = mysqli_fetch_assoc($result)) {
 					echo "<tr>";
-					echo "<td>".$seq."</td>";
-					echo "<td>".$employee['id']."</td>";
+					echo "<td>".$employee['Review1']."</td>";
 					
-					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
+					echo "<td>".$employee['Review2']."</td>";
 
-					echo "<td>".$employee['address']."</td>";
+					echo "<td>".$employee['FinalExam']."</td>";
 					
-					echo "<td>".$employee['points']."</td>";
+					echo "<td>".$employee['degree']."</td>";
+
+					echo "<td>".$pname."</td>";
 					
 					$seq+=1;
 				}

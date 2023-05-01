@@ -1,6 +1,6 @@
 <?php 
 require_once ('process/dbh.php');
-$sql = "SELECT id, firstName, lastName, address FROM employee";
+$sql = "SELECT id, firstName, lastName, address ,points FROM `employee`, `rank` WHERE rank.eid = employee.id order by rank.points desc";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -38,6 +38,7 @@ $result = mysqli_query($conn, $sql);
 				<th align = "center">Student. ID</th>
 				<th align = "center">Name</th>
 				<th align = "center">Company</th>
+				<th align = "center">Points</th>
 			</tr>
 
 			
@@ -53,7 +54,7 @@ $result = mysqli_query($conn, $sql);
 
 					echo "<td>".$employee['address']."</td>";
 					
-					
+					echo "<td>".$employee['points']."</td>";
 					
 					$seq+=1;
 				}

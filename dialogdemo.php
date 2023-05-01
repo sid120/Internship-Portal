@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php 
+require_once ('process/dbh.php');
+$id = $_GET['id'];
+$sql = "SELECT Review1,Review2,FinalExam FROM `employee` WHERE id = '$id'";
+$result = mysqli_query($conn, $sql);
+?>
+
+
 <html>
 <head>
 	<title>Dialog Box with Form Elements</title>
@@ -42,7 +50,6 @@
 
 	<div class="divider"></div>
 	<div id="divimg">
-		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Students List</h2>
     	<table>
 
 			<tr bgcolor="#0000">
@@ -52,6 +59,19 @@
 				<th align = "center">Final-Exam</th>
 			</tr>
 
+			<?php
+				$seq = 1;
+				while ($employee = mysqli_fetch_assoc($result)) {
+					echo "<tr>";
+					echo "<td>".$employee['Review1']."</td>";
+
+					echo "<td>".$employee['Review2']."</td>";
+
+					echo "<td>".$employee['FinalExam']."</td>";
+			
+				}
+
+			?>
 			
 		</table>
 

@@ -21,8 +21,8 @@ $result = mysqli_query($conn, $sql);
 				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
 				<li><a class="homeblack" href="addemp.php">Add Students</a></li>
 				<li><a class="homered" href="viewemp.php">View Students</a></li>
-				<!-- <li><a class="homeblack" href="assign.php">Assign Project</a></li>
-				<li><a class="homeblack" href="assignproject.php">Project Status</a></li>
+				<li><a class="homeblack" href="assign.php">Schedule Review</a></li>
+				<!-- <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
 				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
 				<li><a class="homeblack" href="empleave.php">Students Leave</a></li> -->
 				<li><a class="homeblack" href="alogin.html">Log Out</a></li>
@@ -31,10 +31,8 @@ $result = mysqli_query($conn, $sql);
 	</header>
 	
 	<div class="divider"></div>
-
 		<table>
 			<tr>
-
 				<th align = "center">Student. ID</th>
 				<th align = "center">Picture</th>
 				<th align = "center">Name</th>
@@ -44,7 +42,8 @@ $result = mysqli_query($conn, $sql);
 				<th align = "center">Company</th>
 				<th align = "center">Department</th>
 				<th align = "center">Point</th>
-				<th align = "center">Options</th>
+				<th align = "center">Assign Faculty</th>
+				<th align = "center">Assign Company Mentor</th>
 			</tr>
 
 			<?php
@@ -74,6 +73,10 @@ $result = mysqli_query($conn, $sql);
 					
 					$Select_name=$_POST['faculty'];
 					echo "</select> <input type='submit' name='button' value='Assign'></form></td>";
+
+					echo "<td> <form action='process/addcompanymentor.php?id=$employee[id]' method='post'>";
+						echo "<input type='text' placeholder='Company Mentor' name='CMentor' required='required'>";
+					echo "<input type='submit' name='btn2' value='Assign'></form></td>";
 
 				}
 

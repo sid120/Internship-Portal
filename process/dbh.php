@@ -5,9 +5,9 @@
 // $dbPassword = "12345678";
 // $dBName = "database-1";
 
-$servername = "database-1.cloqkpkth6hm.ap-south-1.rds.amazonaws.com";
-$dBUsername = "admin";
-$dbPassword = "12345678";
+$servername = "localhost";
+$dBUsername = "root";
+$dbPassword = "";
 $dBName = "mydatabase";
 
 $conn = mysqli_connect($servername, $dBUsername, $dbPassword, $dBName);

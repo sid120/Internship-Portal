@@ -60,12 +60,10 @@ $result = mysqli_query($conn, $sql);
 					
 					echo "<td>".$employee['points']."</td>";
 
-					echo "<td>";
-						echo "<button><a href='dialogdemo.php'>REVIEW</button>";
-					echo "</td>";
-					
-					
-
+					echo "<td> <form action='dialogdemo.php?id=$employee[id]' method='post'>";
+						echo "<input type='submit' name='button' value='REVIEW'>";
+					echo "</form></td>";
+				
 
 					$seq+=1;
 				}
