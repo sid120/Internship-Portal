@@ -1,10 +1,11 @@
 <?php 
 	$id = (isset($_GET['id']) ? $_GET['id'] : '');
 	require_once ('process/dbh.php');
-	 $sql1 = "SELECT `pid` FROM `employee` where id = '$id'";
+	 $sql1 = "SELECT * FROM `employee` where id = '$id'";
 	 $result1 = mysqli_query($conn, $sql1);
 	 $employeen = mysqli_fetch_array($result1);
 	 $pid = ($employeen['pid']);
+	 $empName = ($employeen['firstName']);
 	 $sqlf = "SELECT * FROM `flogin` where pid = '$pid'";
 	 $resultf = mysqli_query($conn, $sqlf);
 	 $faculty = mysqli_fetch_array($resultf);	
@@ -40,6 +41,8 @@ $result3 = mysqli_query($conn, $sql3);
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat" rel="stylesheet">
 </head>
 <body>
+
+	 
 	
 	<header>
 		<nav>
@@ -57,9 +60,8 @@ $result3 = mysqli_query($conn, $sql3);
 	<div class="divider"></div>
 	<div id="divimg">
 	<div>
-		<!-- <h2>Welcome <?php echo "$empName"; ?> </h2> -->
+		<h2>Welcome <?php echo "$empName"; ?> </h2>
 
-		    	<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Students List</h2>
     	<table>
 
 			<tr bgcolor="#000">
@@ -92,77 +94,86 @@ $result3 = mysqli_query($conn, $sql3);
 			?>
 
 		</table>
-   
-    	<!-- <h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Due Projects</h2>
+
+
+
+		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Review 1 Upload</h2>
     	
 
     	<table>
 
 			<tr>
-				<th align = "center">Project Name</th>
-				<th align = "center">Due Date</th>
+			<?php 
+			echo "<form action = 'uploadreview1ppt.php?id=$id' method='POST' enctype='multipart/form-data'>";
+			echo "<th align = 'center'><label for='file'>Upload Review 1 PPT: <input type='file' name='R1ppt' id='offer1'></label></th>";
+			echo "<th align = 'center'><input type='submit' name='btn2' value='Upload'></th>";
+			echo "</form>";
+			?>
 				
 			</tr>
 
-			
-
-			<?php
-				while ($employee1 = mysqli_fetch_assoc($result1)) {
-					echo "<tr>";
-					
-					echo "<td>".$employee1['pname']."</td>";
-					
-					echo "<td>".$employee1['duedate']."</td>";
-
-				}
-
-
-			?>
-
-		</table> -->
+		</table> 
 
 
 
-		<!-- <h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Salary Status</h2>
+
+		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Review 2 Upload</h2>
     	
 
     	<table>
 
 			<tr>
-				
-				<th align = "center">Base Salary</th>
-				<th align = "center">Bonus</th>
-				<th align = "center">Total Salary</th>
+			
+			<?php 
+			echo "<form action='uploadreview2ppt.php?id=$id' method='POST' enctype='multipart/form-data'>";
+			echo "<th align = 'center'><label for='file'>Upload Review 2 PPT: <input type='file' name='R2ppt' id='offer2'></label></th>";
+			echo "<th align = 'center'><input type='submit' name='btn3' value='Upload'></th>";
+			echo "</form>";
+			?>
 				
 			</tr>
 
-			
+		</table>
+		
+		
+		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Final Exam Upload</h2>
+    	
 
-			<?php
-				while ($employee = mysqli_fetch_assoc($result3)) {
-					
+    	<table>
 
-					echo "<tr>";
-					
-					
-					echo "<td>".$employee['base']."</td>";
-					echo "<td>".$employee['bonus']." %</td>";
-					echo "<td>".$employee['total']."</td>";
-					
-				}
+			<tr>
 
-
-				
-
-
+			<?php 
+			echo "<form action='uploadfinalexam.php?id=$id' method='POST' enctype='multipart/form-data'>";
+			echo "<th align = 'center'><label for='file'>Final Exam PPT: <input type='file' name='finalppt' id='finalp'></label></th>";
+			echo "<th align = 'center'><label for='file'>Final Exam Report: <input type='file' name='finalreport' id='finalr'></label></th>";
+			echo "<th align = 'center'><input type='submit' name='btn4' value='Upload'></th>";
+			echo "</form>";
 			?>
+			
+			</tr>
 
-		</table> -->
+		</table>
+		
+		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Common Upload</h2>
+    	
+
+    	<table>
+
+			<tr>
+			
+			<?php 
+			echo "<form action='uploadofferannexure.php?id=$id' method='POST' enctype='multipart/form-data'>";
+			echo "<th align = 'center'><label for='file'>Upload offer letter: <input type='file' name='offer' id='offer1'></label></th>";
+			echo "<th align = 'center'><label for='file'>Upload Annexure letter: <input type='file' name='Annexure' id='Annexure1'></label></th>";
+			echo "<th align = 'center'><input type='submit' name='btn5' value='Upload'></th>";
+			echo "</form>";
+			?>
+				
+			</tr>
 
 
-
-
-
+		</table> 
 
 
 

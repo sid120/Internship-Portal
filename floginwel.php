@@ -43,7 +43,6 @@ $result = mysqli_query($conn, $sql);
 				<th align = "center">Student. ID</th>
 				<th align = "center">Name</th>
 				<th align = "center">Company</th>
-				<th align = "center">Points</th>
 				<th align = "center">Review</th>
 			</tr>
 
@@ -57,14 +56,11 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
 
 					echo "<td>".$employee['address']."</td>";
-					
-					echo "<td>".$employee['points']."</td>";
 
 					echo "<td> <form action='dialogdemo.php?id=$employee[id]' method='post'>";
 						echo "<input type='submit' name='button' value='REVIEW'>";
 					echo "</form></td>";
 				
-
 					$seq+=1;
 				}
 

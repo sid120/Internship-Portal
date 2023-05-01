@@ -2,7 +2,7 @@
 <?php 
 require_once ('process/dbh.php');
 $id = $_GET['id'];
-$sql = "SELECT Review1,Review2,FinalExam FROM `employee` WHERE id = '$id'";
+$sql = "SELECT * FROM `employee` WHERE id = '$id'";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -14,12 +14,82 @@ $result = mysqli_query($conn, $sql);
 
 </head>
 <body>
+	
 	<?php
 		if(isset($_POST['submit'])) {
-			$selected_option = $_POST['dropdown'];
-			$uploaded_file = $_FILES['file']['name'];
-			$input_value = $_POST['input'];
-			// do something with the form data
+			include('process/dbh.php');
+			$id = $_GET['id'];
+			$review = $_POST['dropdown'];
+			$files = $_FILES['file'];
+			$filename = $files['name'];
+			$marks = $_POST['input'];
+			$filrerror = $files['error'];
+			$filetemp = $files['tmp_name'];
+			$fileext = explode('.', $filename);
+			$filecheck = strtolower(end($fileext));
+			$fileextstored = array('png' , 'jpg' , 'jpeg' , 'pdf' , 'docx');
+
+			// echo ("<SCRIPT LANGUAGE='JavaScript'>
+    		// 			window.alert('$id $review $filename $marks')
+    		// 			window.location.href='javascript:history.go(-1)';
+    		// 			</SCRIPT>");
+			
+			if(strcmp($review,"Review 1") == 0)
+			{
+				if(in_array($filecheck, $fileextstored))
+				{
+					$destinationfile = 'uploadsfaculty/'.$filename;
+					move_uploaded_file($filetemp, $destinationfile);
+
+					$sql = "UPDATE `employee` SET `R1upf`= '$destinationfile', `R1marks`='$marks' WHERE `id` = $id";
+    				$result = mysqli_query($conn, $sql);
+					
+					if(($result) == 1)
+					{
+						echo ("<SCRIPT LANGUAGE='JavaScript'>
+    					window.alert('Sucessfully Updated')
+    					window.location.href='javascript:history.go(-1)';
+    					</SCRIPT>");
+					}
+				}
+			}
+			else if(strcmp($review,"Review 2") == 0){
+    			if(in_array($filecheck, $fileextstored))
+				{
+					$destinationfile = 'uploadsfaculty/'.$filename;
+					move_uploaded_file($filetemp, $destinationfile);
+
+					$sql = "UPDATE `employee` SET `R2upf`= '$destinationfile', `R2marks`='$marks' WHERE `id` = $id";
+    				$result = mysqli_query($conn, $sql);
+					
+					if(($result) == 1)
+					{
+						echo ("<SCRIPT LANGUAGE='JavaScript'>
+    					window.alert('Sucessfully Updated')
+    					window.location.href='javascript:history.go(-1)';
+    					</SCRIPT>");
+					}
+				}
+			}
+			else if(strcmp($review,"Final Exam") == 0){
+    			if(in_array($filecheck, $fileextstored))
+				{
+					$destinationfile = 'uploadsfaculty/'.$filename;
+					move_uploaded_file($filetemp, $destinationfile);
+
+					$sql = "UPDATE `employee` SET `Finalupf`= '$destinationfile', `Finalmarks`='$marks' WHERE `id` = $id";
+    				$result = mysqli_query($conn, $sql);
+					
+					if(($result) == 1)
+					{
+						echo ("<SCRIPT LANGUAGE='JavaScript'>
+    					window.alert('Sucessfully Updated')
+    					window.location.href='javascript:history.go(-1)';
+    					</SCRIPT>");
+					}
+				}
+			}
+			
 		}
 	?>
 
@@ -30,9 +100,9 @@ $result = mysqli_query($conn, $sql);
 		<form method="POST" enctype="multipart/form-data">
 			<label for="dropdown">Select an Option:</label>
 			<select name="dropdown" id="dropdown">
-				<option value="option1"> Review 1</option>
-				<option value="option2"> Review 2</option>
-				<option value="option3"> Review 3</option>
+				<option value="Review 1"> Review 1</option>
+				<option value="Review 2"> Review 2</option>
+				<option value="Final Exam"> Final Exam</option>
 			</select>
 			<br><br>
 			<label for="file">Choose a File:</label>
@@ -55,19 +125,28 @@ $result = mysqli_query($conn, $sql);
 			<tr bgcolor="#0000">
 				
 				<th align = "center">Review-1</th>
+				<th align = "center">Marks</th>
 				<th align = "center">Review-2</th>
+				<th align = "center">Marks</th>
 				<th align = "center">Final-Exam</th>
+				<th align = "center">Marks</th>	
 			</tr>
 
 			<?php
 				$seq = 1;
 				while ($employee = mysqli_fetch_assoc($result)) {
 					echo "<tr>";
-					echo "<td>".$employee['Review1']."</td>";
+					echo "<td>".$employee['Review1']."<br>"."<a href='$employee[R1upf]'>see doc</a>"."</td>";
 
-					echo "<td>".$employee['Review2']."</td>";
+					echo "<td>".$employee['R1marks']."/10"."</td>";
 
-					echo "<td>".$employee['FinalExam']."</td>";
+					echo "<td>".$employee['Review2']."<br>"."<a href='$employee[R2upf]'>see doc</a>"."</td>";
+
+					echo "<td>".$employee['R2marks']."/10"."</td>";
+
+					echo "<td>".$employee['FinalExam']."<br>"."<a href='$employee[Finalupf]'>see doc</a>"."</td>";
+
+					echo "<td>".$employee['Finalmarks']."/10"."</td>";
 			
 				}
 
