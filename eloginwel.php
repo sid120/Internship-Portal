@@ -165,7 +165,9 @@ $result3 = mysqli_query($conn, $sql3);
 			<?php 
 			echo "<form action='uploadofferannexure.php?id=$id' method='POST' enctype='multipart/form-data'>";
 			echo "<th align = 'center'><label for='file'>Upload offer letter: <input type='file' name='offer' id='offer1'></label></th>";
-			echo "<th align = 'center'><label for='file'>Upload Annexure letter: <input type='file' name='Annexure' id='Annexure1'></label></th>";
+			echo "<th align = 'center'><label for='file'>Upload Annexure1 letter: <input type='file' name='Annexure' id='Annexure1'></label></th>";
+			echo "<th align = 'center'><label for='file'>Upload Annexure2 letter: <input type='file' name='Annexure2' id='Annexure1'></label></th>";
+			echo "<th align = 'center'><label for='file'>Upload Annexure3 letter: <input type='file' name='Annexure3' id='Annexure1'></label></th>";
 			echo "<th align = 'center'><input type='submit' name='btn5' value='Upload'></th>";
 			echo "</form>";
 			?>

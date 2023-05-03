@@ -5,8 +5,18 @@ require_once ('dbh.php');
 //$pname = $_POST['pname'];
 //$eid = $_POST['eid'];
 $subdate = $_POST['duedate'];
-$pid = $_POST['faculty'];
+$subdate1 = $_POST['duedate1'];
+//$pid = $_POST['faculty'];
 $review = $_POST['Reviews'];
+
+$reviewdate = $subdate." - ".$subdate1;
+
+/*
+echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.alert('$reviewdate')
+    window.location.href='javascript:history.go(-1)';
+    </SCRIPT>");
+*/
 
 
 //$sql = "INSERT INTO `project`(`eid`, `pname`, `duedate` , `status`) VALUES ('$eid' , '$pname' , '$subdate' , 'Due')";
@@ -15,15 +25,15 @@ $review = $_POST['Reviews'];
 
 if(strcmp($review,"Review 1") == 0)
 {
-    $sql = "UPDATE `employee` SET `Review1`= '$subdate' WHERE `pid` = $pid";
+    $sql = "UPDATE `employee` SET `Review1`= '$reviewdate'";
     $result = mysqli_query($conn, $sql);    
 }
 else if(strcmp($review,"Review 2") == 0){
-    $sql = "UPDATE `employee` SET `Review2` = '$subdate' WHERE `pid` = $pid";
+    $sql = "UPDATE `employee` SET `Review2`= '$reviewdate'";
     $result = mysqli_query($conn, $sql);
 }
 else if(strcmp($review,"Final Exam") == 0){
-    $sql = "UPDATE `employee` SET `FinalExam` = '$subdate' WHERE `pid` = $pid";
+    $sql = "UPDATE `employee` SET `FinalExam`= '$reviewdate'";
     $result = mysqli_query($conn, $sql);
 }
 

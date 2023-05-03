@@ -78,37 +78,10 @@ $result = mysqli_query($conn, $sql);
                             </div>
                         </div>
 
-                    <div class="row row-space">
-                        <div class="col-2">
-                            <div class="input-group">
-                                <div class="rs-select2 js-select-simple select--no-search">
-                        <?php
-				            $query = "SELECT * FROM `flogin`";
-					        $Select_name = 0;
-
-                            echo "<td> <select name = 'faculty' value=''>";
-
-					        echo "<option value='' disabled='disabled' selected='selected'>Select Faculty</option>";
-
-					        foreach ($conn->query($query) as $row){
-
-						        echo "<option value=$row[pid]>$row[pname]</option>";
-					        }
-					
-					        $Select_name=$_POST['faculty'];
-					        echo "</select>";
-                            ?>
-                                    <div class="select-dropdown"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-1" type="date" placeholder="date" name="duedate" required="required">
-                                   
+                                    From <input class="input--style-1" type="date" placeholder="date" name="duedate" required="required"> To <input class="input--style-1" type="date" placeholder="date" name="duedate1" required="required">
                                 </div>
                             </div>
                             

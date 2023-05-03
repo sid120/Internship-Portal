@@ -1,6 +1,6 @@
 <?php 
 require_once ('process/dbh.php');
-$sql = "SELECT id, firstName, lastName, address ,points FROM `employee`, `rank` WHERE rank.eid = employee.id order by rank.points desc";
+$sql = "SELECT * FROM `employee`";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -36,26 +36,85 @@ $result = mysqli_query($conn, $sql);
 			<tr bgcolor="#000">
 				<th align = "center">Seq.</th>
 				<th align = "center">Student. ID</th>
+				<th align = "center">Picture</th>
 				<th align = "center">Name</th>
 				<th align = "center">Company</th>
-				<th align = "center">Points</th>
+				<th align = "center">Offer letter</th>
+				<th align = "center">Annexures</th>
+				<th align = "center">Review 1</th>
+				<th align = "center">Review 2</th>
+				<th align = "center">Final Exam</th>
+				<th align = "center">Marks</th>
+				<th align = "center">Faculty</th>
+				<th align = "center">Review Annexure</th>
+				<th align = "center">Company Mentor</th>
 			</tr>
 
 			
 
 			<?php
 				$seq = 1;
+				error_reporting(0);
 				while ($employee = mysqli_fetch_assoc($result)) {
 					echo "<tr>";
 					echo "<td>".$seq."</td>";
 					echo "<td>".$employee['id']."</td>";
+
+					echo "<td><img src='process/".$employee['pic']."' height = 60px width = 60px></td>";
 					
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
 
 					echo "<td>".$employee['address']."</td>";
+
+					echo "<td> <a href='$employee[R2upf]'>see doc</a> </td>";
+					echo "<td> <a href='$employee[Anexure]'>Anexure 1</a> <br> <a href='$employee[Anexure2]'>Anexure 2</a> <br> <a href='$employee[Anexure3]'>Anexure 3</a></td>";
 					
-					echo "<td>".$employee['points']."</td>";
+					echo "<td>".$employee['Review1']."<br>"."<a href='$employee[R1ppt]'>see doc</a>"."</td>";
+
+					echo "<td>".$employee['Review2']."<br>"."<a href='$employee[R2ppt]'>see doc</a>"."</td>";
+
+					echo "<td>".$employee['FinalExam']."<br>"."<a href='$employee[Finalppt]'>PPT</a>"."<br>"."<a href='$employee[Finalreport]'>REPORT</a>"."</td>";
+
+					echo "<td>"."Review 1 - ".$employee['R1marks']."/10"."<br>"."Review 2 - ".$employee['R2marks']."/10"."<br>"."Final Exam - ".$employee['Finalmarks']."/10"."<br>"."</td>";
+
+					$sql1 = "SELECT * FROM `employee` where id = '$employee[id]'";
+	 				$result1 = mysqli_query($conn, $sql1);
+	 				$employeen = mysqli_fetch_array($result1);
+	 				$pid = ($employeen['pid']);
+					$sqlf = "SELECT * FROM `flogin` where pid = '$pid'";
+					$resultf = mysqli_query($conn, $sqlf);
+					$faculty = mysqli_fetch_array($resultf);
 					
+					if(isset($pid))
+					{
+						$pname = ($faculty['pname']);
+					}
+					
+
+					if(isset($pname))
+					{
+						echo "<td>".$pname."</td>";
+					}
+					else
+					{
+						echo "<td> YET TO ASSIGN </td>";
+					}
+
+					
+					echo "<td> <a href='$employee[R1upf]'>Review 1</a> <br> <a href='$employee[R2upf]'>Review 2</a> <br> <a href='$employee[Finalupf]'>Final Exam</a></td>";
+					
+					$c = $employee['degree'];
+
+					if($c != null)
+					{
+						echo "<td>".$employee['degree']."</td>";
+					}
+					else
+					{
+						echo "<td>NOT ASSIGNED </td>"; 
+					}
+					
+
 					$seq+=1;
 				}
 			?>
