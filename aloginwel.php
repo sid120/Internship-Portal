@@ -18,7 +18,7 @@ $result = mysqli_query($conn, $sql);
 			<ul id="navli">
 				<li><a class="homered" href="aloginwel.php">HOME</a></li>
 				<li><a class="homeblack" href="addemp.php">Add Students</a></li>
-				<li><a class="homeblack" href="viewemp.php">View Students</a></li>
+				<li><a class="homeblack" href="viewemp.php">Assign Faculty</a></li>
 				<li><a class="homeblack" href="assign.php">Schedule Review</a></li>
 				<!-- <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
 				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>

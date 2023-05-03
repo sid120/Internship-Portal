@@ -20,7 +20,7 @@ $result = mysqli_query($conn, $sql);
 			<ul id="navli">
 				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
 				<li><a class="homeblack" href="addemp.php">Add Students</a></li>
-				<li><a class="homered" href="viewemp.php">View Students</a></li>
+				<li><a class="homered" href="viewemp.php">Assign Faculty</a></li>
 				<li><a class="homeblack" href="assign.php">Schedule Review</a></li>
 				<!-- <li><a class="homeblack" href="assignproject.php">Project Status</a></li>
 				<li><a class="homeblack" href="salaryemp.php">Salary Table</a></li>
@@ -36,12 +36,6 @@ $result = mysqli_query($conn, $sql);
 				<th align = "center">Student. ID</th>
 				<th align = "center">Picture</th>
 				<th align = "center">Name</th>
-				<th align = "center">Email</th>
-				<th align = "center">Gender</th>
-				<th align = "center">Contact</th>
-				<th align = "center">Company</th>
-				<th align = "center">Department</th>
-				<th align = "center">Point</th>
 				<th align = "center">Assign Faculty</th>
 				<th align = "center">Assign Company Mentor</th>
 			</tr>
@@ -53,14 +47,6 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['id']."</td>";
 					echo "<td><img src='process/".$employee['pic']."' height = 60px width = 60px></td>";
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
-					
-					echo "<td>".$employee['email']."</td>";
-					echo "<td>".$employee['gender']."</td>";
-					echo "<td>".$employee['contact']."</td>";
-					
-					echo "<td>".$employee['address']."</td>";
-					echo "<td>".$employee['dept']."</td>";
-					echo "<td>".$employee['points']."</td>";
 					$Select_name = 0;
 					echo "<td> <form action='process/assignfacprocess.php?id=$employee[id]' method='post'> <select name = 'faculty' value=''>";
 					
