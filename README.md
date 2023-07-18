@@ -1,28 +1,28 @@
-# Employee Management System Database
+# Internship Management System Database
 
-Hello There, It is a simple university project of database course. I have made a simple UI and basic SQL commands to make this project.
-Created with help of YouTube, Google, GitHub, Stack Overflow, free templates on the internet and so on. 
+Hello There, It is a simple university project for a database course. I have made a simple UI and basic SQL commands to make this project.
+Created with the help of YouTube, Google, GitHub, Stack Overflow, free templates on the internet, and so on. 
 
 ## This site features:
 ### Admin Panel:
-* Different Login system for Admin and Employees.
-* Admin can add new employees, Assign individual Porjects, Check Salary, Check Staus of projects, Mark the projects.
+* Different Login systems for Admin and Employees.
+* Admin can add new employees, Assign individual Projects, Check Salary, Check the Status of projects, and Mark the projects.
 * Leaderboard gets updated upon providing the marks.
-* According to the marks employees get bonus over the base salary.
+* According to the marks employees get a bonus over the base salary.
 
 ### User Panel:
-* Check the leaderboard, Due projects and salary.
-* Can view own profile and update the basic infos.
+* Check the leaderboard, Due projects, and salary.
+* Can view own profile and update the basic info.
 * Submit the project.
 * Apply for leave.
 
-## Languages used for this projects are:
+## Languages used for this project are:
 * HTML
 * CSS
 * Javascript
 * My SQL
 
-### ER Diagram and Relational Schema is also provided as PDF's. 
+### ER Diagram and Relational Schema are also provided as PDFs. 
 
 ## Istallation Guide:
 1. Clone the whole repository to your localhost folder.
@@ -39,7 +39,7 @@ Pass: admin
 ### User Panel:
 ID: User's Email Address
 
-Pass: 1234 (By Default, User can change if they wish)
+Pass: 1234 (By Default, Users can change if they wish)
 
 
-Ignore the noob level coding. ^_^
+Ignore the noob-level coding. ^_^
